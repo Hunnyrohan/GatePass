@@ -37,13 +37,13 @@ const FeaturesSection = () => {
       icon: FiBarChart2,
       title: 'Real-time Analytics',
       description: 'Track sales, attendance, and revenue with comprehensive analytics dashboard.',
-      color: 'bg-orange-500'
+      color: 'bg-cyan-500'
     },
     {
       icon: FiUsers,
       title: 'Community Driven',
       description: 'Join thousands of event organizers and attendees worldwide.',
-      color: 'bg-orange-500'
+      color: 'bg-cyan-500'
     },
     {
       icon: FiClock,

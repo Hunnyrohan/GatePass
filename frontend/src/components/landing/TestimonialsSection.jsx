@@ -5,25 +5,25 @@ import { FiStar } from 'react-icons/fi';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: 'Sushant Mahato',
+      name: 'Rohan Kumar Yadav',
       role: 'Event Organizer',
-      content: 'TicketGate made organizing my music festival so much easier. The analytics are incredible!',
-      rating: 5,
-      avatar: 'SM',
-    },
-    {
-      name: 'Roshani Yadav',
-      role: 'Conference Host',
-      content: 'Best ticketing platform I\'ve used. The QR code check-in feature saved us hours.',
+      content: 'Gatepass made organizing my music festival so much easier. The analytics are incredible!',
       rating: 5,
       avatar: 'RY',
     },
     {
-      name: 'Vijay Mahato',
+      name: 'Kritika Mandal',
+      role: 'Conference Host',
+      content: 'Best ticketing platform I\'ve used. The QR code check-in feature saved us hours.',
+      rating: 5,
+      avatar: 'KM',
+    },
+    {
+      name: 'Abhishek singh',
       role: 'Workshop Creator',
       content: 'Simple, secure, and professional. My attendees love the seamless experience.',
       rating: 5,
-      avatar: 'VM',
+      avatar: 'AS',
     },
   ];
 

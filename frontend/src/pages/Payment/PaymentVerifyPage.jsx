@@ -64,7 +64,7 @@ const PaymentVerifyPage = () => {
 
           if (response?.data?.success) {
             toast.success('Payment verified successfully!');
-            navigate('/purchase/success', {
+            navigate(`/purchase/success?transactionId=${decoded.transaction_uuid}`, {
               replace: true,
               state: {
                 purchase: response.data.data?.purchase,
@@ -190,16 +190,16 @@ const PaymentVerifyPage = () => {
   }, [navigate, searchParams]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-orange-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-cyan-50 p-4">
       <div className="max-w-2xl w-full">
         {/* Debug Panel */}
         {showDebug && debugInfo && (
-          <div className="mb-6 bg-white rounded-lg shadow-xl border-2 border-orange-500 overflow-hidden">
-            <div className="bg-orange-500 text-white px-6 py-4 flex justify-between items-center">
+          <div className="mb-6 bg-white rounded-lg shadow-xl border-2 border-cyan-500 overflow-hidden">
+            <div className="bg-cyan-500 text-white px-6 py-4 flex justify-between items-center">
               <h3 className="text-lg font-bold">🔍 Payment Debug Info</h3>
               <button
                 onClick={() => setShowDebug(false)}
-                className="text-white hover:text-orange-100 text-2xl leading-none"
+                className="text-white hover:text-cyan-100 text-2xl leading-none"
               >
                 ×
               </button>
@@ -263,7 +263,7 @@ const PaymentVerifyPage = () => {
           {showDebug && (
             <button
               onClick={() => setShowDebug(!showDebug)}
-              className="mt-4 text-sm text-orange-600 hover:text-orange-700 underline"
+              className="mt-4 text-sm text-cyan-600 hover:text-cyan-700 underline"
             >
               {showDebug ? 'Hide' : 'Show'} Debug Info
             </button>

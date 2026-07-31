@@ -98,7 +98,7 @@ const OrganizerDashboardPage = () => {
       label: 'Total Revenue',
       value: formatCurrency(totalRevenue),
       icon: FiCreditCard,
-      color: 'bg-orange-500',
+      color: 'bg-cyan-500',
     },
   ];
 
@@ -158,7 +158,7 @@ const OrganizerDashboardPage = () => {
                 <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">Revenue Overview</h2>
                 <p className="text-sm text-gray-600">Last 6 Months Performance</p>
               </div>
-              <div className="px-4 py-2 bg-orange-500 rounded-lg">
+              <div className="px-4 py-2 bg-cyan-500 rounded-lg">
                 <p className="text-sm font-semibold text-gray-900">Total: {formatCurrency(totalRevenue)}</p>
               </div>
             </div>

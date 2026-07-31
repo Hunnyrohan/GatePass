@@ -32,7 +32,7 @@ const Select = ({
           w-full px-4 py-3 rounded-xl border transition-all duration-200 outline-none
           ${error 
             ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-200' 
-            : 'border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-200'
+            : 'border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-200'
           }
           disabled:bg-gray-100 disabled:cursor-not-allowed
           ${className}

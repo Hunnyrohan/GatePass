@@ -16,8 +16,8 @@ const generateAccessToken = (payload) => {
     config.JWT_SECRET,
     {
       expiresIn: config.JWT_EXPIRES_IN,
-      issuer: 'ticketgate-api',
-      audience: 'ticketgate-client'
+      issuer: 'gatepass-api',
+      audience: 'gatepass-client'
     }
   );
 };
@@ -34,8 +34,8 @@ const generateRefreshToken = (payload) => {
     config.JWT_REFRESH_SECRET,
     {
       expiresIn: config.JWT_REFRESH_EXPIRES_IN,
-      issuer: 'ticketgate-api',
-      audience: 'ticketgate-client'
+      issuer: 'gatepass-api',
+      audience: 'gatepass-client'
     }
   );
 };
@@ -46,8 +46,8 @@ const generateRefreshToken = (payload) => {
 const verifyAccessToken = (token) => {
   try {
     const decoded = jwt.verify(token, config.JWT_SECRET, {
-      issuer: 'ticketgate-api',
-      audience: 'ticketgate-client'
+      issuer: 'gatepass-api',
+      audience: 'gatepass-client'
     });
     return { valid: true, payload: decoded };
   } catch (error) {
@@ -67,8 +67,8 @@ const verifyAccessToken = (token) => {
 const verifyRefreshToken = (token) => {
   try {
     const decoded = jwt.verify(token, config.JWT_REFRESH_SECRET, {
-      issuer: 'ticketgate-api',
-      audience: 'ticketgate-client'
+      issuer: 'gatepass-api',
+      audience: 'gatepass-client'
     });
     
     if (decoded.type !== 'refresh') {

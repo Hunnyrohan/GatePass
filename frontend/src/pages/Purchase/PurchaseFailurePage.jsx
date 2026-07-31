@@ -58,7 +58,7 @@ const PurchaseFailurePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-cyan-50/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -100,7 +100,7 @@ const PurchaseFailurePage = () => {
             {purchase && !isLoadingPurchase && (
               <div className="pb-6 border-b-2 border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <div className="p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg">
+                  <div className="p-2 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg">
                     <FiTag className="w-5 h-5 text-white" />
                   </div>
                   Purchase Details
@@ -123,15 +123,15 @@ const PurchaseFailurePage = () => {
                     </div>
                   )}
                   {purchase.totalAmount && (
-                    <div className="p-4 rounded-xl bg-gradient-to-br from-orange-50 to-white border border-orange-200">
+                    <div className="p-4 rounded-xl bg-gradient-to-br from-cyan-50 to-white border border-cyan-200">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center gap-3">
-                          <div className="p-2 bg-orange-100 rounded-lg">
-                            <FiDollarSign className="w-5 h-5 text-orange-600" />
+                          <div className="p-2 bg-cyan-100 rounded-lg">
+                            <FiDollarSign className="w-5 h-5 text-cyan-600" />
                           </div>
                           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Amount</p>
                         </div>
-                        <p className="font-bold text-xl bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                        <p className="font-bold text-xl bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                           {formatCurrency(purchase.totalAmount)}
                         </p>
                       </div>
@@ -142,7 +142,7 @@ const PurchaseFailurePage = () => {
             )}
 
             {/* Error Information */}
-            <div className="p-6 rounded-xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200">
+            <div className="p-6 rounded-xl bg-gradient-to-r from-red-50 to-cyan-50 border border-red-200">
               <div className="flex items-start gap-4">
                 <FiXCircle className="w-6 h-6 text-red-600 flex-shrink-0 mt-1" />
                 <div>
@@ -177,7 +177,7 @@ const PurchaseFailurePage = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <Button
                 variant="primary"
-                className="flex-1 py-4 text-lg font-bold bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 shadow-lg hover:shadow-xl"
+                className="flex-1 py-4 text-lg font-bold bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-lg hover:shadow-xl"
                 onClick={() => navigate(-1)}
               >
                 <span className="flex items-center justify-center gap-2">

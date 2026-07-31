@@ -78,8 +78,8 @@ const EmailVerificationPage = () => {
         className="max-w-md w-full bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 p-8"
       >
         <div className="text-center mb-8">
-          <div className="w-16 h-16 bg-orange-600/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-orange-600/20">
-            <FiMail className="w-8 h-8 text-orange-500" />
+          <div className="w-16 h-16 bg-cyan-600/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-cyan-600/20">
+            <FiMail className="w-8 h-8 text-cyan-500" />
           </div>
           <h2 className="text-2xl font-bold text-white mb-2">Check your email</h2>
           <p className="text-gray-400">
@@ -130,7 +130,7 @@ const EmailVerificationPage = () => {
                     bg-gray-800 text-white placeholder:text-gray-500 text-center text-3xl tracking-[1em] font-mono
                     ${status === 'error' 
                       ? 'border-red-500 focus:ring-red-500/20' 
-                      : 'border-gray-700 focus:border-orange-500 focus:ring-orange-500/20'
+                      : 'border-gray-700 focus:border-cyan-500 focus:ring-cyan-500/20'
                     }
                     focus:ring-2
                   `}
@@ -153,7 +153,7 @@ const EmailVerificationPage = () => {
               <button
                 onClick={() => handleVerify()}
                 disabled={status === 'loading' || otp.some(d => !d)}
-                className="w-full bg-orange-600 hover:bg-orange-700 text-white py-4 rounded-lg font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest shadow-lg shadow-orange-600/20"
+                className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-4 rounded-lg font-bold text-lg transition-all disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-widest shadow-lg shadow-cyan-600/20"
               >
                 {status === 'loading' ? (
                   <span className="flex items-center justify-center gap-2">
@@ -168,7 +168,7 @@ const EmailVerificationPage = () => {
                   {canResend ? (
                     <button
                       onClick={handleResend}
-                      className="text-orange-500 hover:text-orange-400 font-medium transition-colors"
+                      className="text-cyan-500 hover:text-cyan-400 font-medium transition-colors"
                     >
                       Resend Code
                     </button>

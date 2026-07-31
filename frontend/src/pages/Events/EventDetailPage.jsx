@@ -297,7 +297,7 @@ const EventDetailPage = () => {
   const totalTicketsSelected = Object.values(selectedTickets).reduce((sum, qty) => sum + qty, 0);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-orange-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <Link to="/events">
@@ -305,7 +305,7 @@ const EventDetailPage = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             whileHover={{ x: -5 }}
-            className="mb-8 inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors group"
+            className="mb-8 inline-flex items-center gap-2 text-gray-600 hover:text-cyan-600 transition-colors group"
           >
             <FiArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
             <span className="font-medium">Back to Events</span>
@@ -389,9 +389,9 @@ const EventDetailPage = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.4 }}
-                    className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-orange-50 to-orange-100/50 hover:shadow-md transition-shadow"
+                    className="flex items-start gap-4 p-4 rounded-xl bg-gradient-to-br from-cyan-50 to-cyan-100/50 hover:shadow-md transition-shadow"
                   >
-                    <div className="p-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg">
+                    <div className="p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg">
                       <FiCalendar className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -434,9 +434,9 @@ const EventDetailPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <Card className="sticky top-8 p-0 shadow-2xl border-0 bg-gradient-to-br from-white via-white to-orange-50/30 backdrop-blur-sm overflow-hidden">
+              <Card className="sticky top-8 p-0 shadow-2xl border-0 bg-gradient-to-br from-white via-white to-cyan-50/30 backdrop-blur-sm overflow-hidden">
                 {/* Header Section */}
-                <div className="p-6 md:p-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
+                <div className="p-6 md:p-8 bg-gradient-to-br from-cyan-600 to-cyan-700 text-white">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl">
                       <FiTag className="w-6 h-6" />
@@ -445,7 +445,7 @@ const EventDetailPage = () => {
                       Select Tickets
                     </h2>
                   </div>
-                  <p className="text-orange-100 text-sm">Choose your preferred ticket type</p>
+                  <p className="text-cyan-100 text-sm">Choose your preferred ticket type</p>
                 </div>
 
                 {/* Content Section */}
@@ -479,8 +479,8 @@ const EventDetailPage = () => {
                               transition={{ delay: 0.5 + index * 0.1 }}
                               whileHover={{ scale: 1.02, y: -2 }}
                               className={`relative rounded-2xl p-5 transition-all duration-300 ${isSelected
-                                  ? 'bg-gradient-to-br from-orange-50 to-orange-100/50 border-2 border-orange-400 shadow-lg'
-                                  : 'bg-white border-2 border-gray-200 hover:border-orange-300 hover:shadow-md'
+                                  ? 'bg-gradient-to-br from-cyan-50 to-cyan-100/50 border-2 border-cyan-400 shadow-lg'
+                                  : 'bg-white border-2 border-gray-200 hover:border-cyan-300 hover:shadow-md'
                                 }`}
                             >
                               {/* Selected Indicator */}
@@ -488,7 +488,7 @@ const EventDetailPage = () => {
                                 <motion.div
                                   initial={{ scale: 0 }}
                                   animate={{ scale: 1 }}
-                                  className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg"
+                                  className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center shadow-lg"
                                 >
                                   <FiCheck className="w-5 h-5 text-white" />
                                 </motion.div>
@@ -497,7 +497,7 @@ const EventDetailPage = () => {
                               {/* Ticket Icon */}
                               <div className="flex items-start gap-4 mb-4">
                                 <div className={`p-3 rounded-xl ${isSelected
-                                    ? 'bg-gradient-to-br from-orange-500 to-orange-600 shadow-lg'
+                                    ? 'bg-gradient-to-br from-cyan-500 to-cyan-600 shadow-lg'
                                     : 'bg-gradient-to-br from-gray-100 to-gray-200'
                                   }`}>
                                   <FiTag className={`w-6 h-6 ${isSelected ? 'text-white' : 'text-gray-600'}`} />
@@ -517,7 +517,7 @@ const EventDetailPage = () => {
                                   <div className="flex items-center justify-between mt-3 pt-3 border-t border-gray-200">
                                     <div>
                                       <p className="text-xs text-gray-500 font-medium mb-1">Price</p>
-                                      <p className="font-bold text-2xl bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                                      <p className="font-bold text-2xl bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                                         {formatCurrency(ticketType.price)}
                                       </p>
                                     </div>
@@ -539,7 +539,7 @@ const EventDetailPage = () => {
                                     type="button"
                                     onClick={() => updateTicketQuantity(ticketType._id, -1)}
                                     disabled={quantity === 0}
-                                    className="p-2.5 rounded-xl border-2 border-gray-300 hover:border-orange-500 hover:bg-orange-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 disabled:hover:border-gray-300 disabled:hover:bg-transparent active:scale-95"
+                                    className="p-2.5 rounded-xl border-2 border-gray-300 hover:border-cyan-500 hover:bg-cyan-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 disabled:hover:border-gray-300 disabled:hover:bg-transparent active:scale-95"
                                   >
                                     <FiMinus className="w-4 h-4 text-gray-700" />
                                   </button>
@@ -549,13 +549,13 @@ const EventDetailPage = () => {
                                     max={Math.min(available, maxPerPurchase)}
                                     value={quantity}
                                     onChange={(e) => handleQuantityChange(ticketType._id, e.target.value)}
-                                    className="w-16 text-center font-bold text-lg border-2 border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 rounded-xl"
+                                    className="w-16 text-center font-bold text-lg border-2 border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 rounded-xl"
                                   />
                                   <button
                                     type="button"
                                     onClick={() => updateTicketQuantity(ticketType._id, 1)}
                                     disabled={quantity >= Math.min(available, maxPerPurchase)}
-                                    className="p-2.5 rounded-xl border-2 border-gray-300 hover:border-orange-500 hover:bg-orange-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 disabled:hover:border-gray-300 disabled:hover:bg-transparent active:scale-95"
+                                    className="p-2.5 rounded-xl border-2 border-gray-300 hover:border-cyan-500 hover:bg-cyan-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all duration-200 disabled:hover:border-gray-300 disabled:hover:bg-transparent active:scale-95"
                                   >
                                     <FiPlus className="w-4 h-4 text-gray-700" />
                                   </button>
@@ -567,11 +567,11 @@ const EventDetailPage = () => {
                                 <motion.div
                                   initial={{ opacity: 0, height: 0 }}
                                   animate={{ opacity: 1, height: 'auto' }}
-                                  className="mt-3 pt-3 border-t border-orange-200"
+                                  className="mt-3 pt-3 border-t border-cyan-200"
                                 >
                                   <div className="flex items-center justify-between">
                                     <span className="text-sm font-medium text-gray-700">Subtotal ({quantity} {quantity === 1 ? 'ticket' : 'tickets'})</span>
-                                    <span className="font-bold text-lg text-orange-600">
+                                    <span className="font-bold text-lg text-cyan-600">
                                       {formatCurrency(ticketType.price * quantity)}
                                     </span>
                                   </div>
@@ -587,11 +587,11 @@ const EventDetailPage = () => {
                           initial={{ opacity: 0, y: 20, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           transition={{ delay: 0.7, type: "spring", stiffness: 200 }}
-                          className="border-t-2 border-gray-200 pt-6 space-y-4 bg-gradient-to-br from-orange-50 via-white to-orange-50/50 rounded-2xl p-6 -mx-6 -mb-6 mt-6"
+                          className="border-t-2 border-gray-200 pt-6 space-y-4 bg-gradient-to-br from-cyan-50 via-white to-cyan-50/50 rounded-2xl p-6 -mx-6 -mb-6 mt-6"
                         >
                           <div className="flex items-center justify-between mb-4">
                             <div className="flex items-center gap-2">
-                              <FiShoppingCart className="w-5 h-5 text-orange-600" />
+                              <FiShoppingCart className="w-5 h-5 text-cyan-600" />
                               <span className="font-bold text-gray-900 text-lg">Order Summary</span>
                             </div>
                           </div>
@@ -603,16 +603,16 @@ const EventDetailPage = () => {
                             </div>
                           </div>
 
-                          <div className="flex items-center justify-between pt-4 border-t-2 border-orange-200">
+                          <div className="flex items-center justify-between pt-4 border-t-2 border-cyan-200">
                             <span className="font-bold text-gray-900 text-xl">Total</span>
-                            <span className="font-bold text-3xl bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                            <span className="font-bold text-3xl bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                               {formatCurrency(totalPrice)}
                             </span>
                           </div>
 
                           <Button
                             variant="primary"
-                            className="w-full py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 transform hover:scale-[1.02] active:scale-[0.98]"
+                            className="w-full py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 transform hover:scale-[1.02] active:scale-[0.98]"
                             onClick={handleCheckout}
                             disabled={totalTicketsSelected === 0}
                           >

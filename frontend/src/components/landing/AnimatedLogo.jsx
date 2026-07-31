@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-const AnimatedLogo = ({ text = 'TicketGate', className = '' }) => {
+const AnimatedLogo = ({ text = 'Gatepass', className = '' }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [showCursor, setShowCursor] = useState(true);
 

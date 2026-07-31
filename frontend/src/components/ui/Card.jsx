@@ -8,7 +8,7 @@ const Card = ({
   ...props
 }) => {
   const baseStyles = 'bg-white rounded-2xl shadow-soft border border-gray-100 transition-all duration-300';
-  const hoverStyles = hover ? 'hover:shadow-xl hover:border-orange-200 cursor-pointer' : '';
+  const hoverStyles = hover ? 'hover:shadow-xl hover:border-cyan-200 cursor-pointer' : '';
   
   const cardClasses = `${baseStyles} ${hoverStyles} ${className}`;
   

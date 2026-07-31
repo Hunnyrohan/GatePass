@@ -86,12 +86,42 @@ const HeroSection = () => {
     latestEvents = [];
   }
 
+  // Beautiful mock events to show when the database is empty
+  const mockEvents = [
+    {
+      _id: 'mock1',
+      title: 'Farewell of Batch 35 Softwarica',
+      startDate: new Date(Date.now() + 86400000 * 5).toISOString(),
+      imageUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+      _id: 'mock2',
+      title: 'Graduation ceremony batch 35',
+      startDate: new Date(Date.now() + 86400000 * 12).toISOString(),
+      imageUrl: 'https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+      _id: 'mock3',
+      title: 'Outing',
+      startDate: new Date(Date.now() + 86400000 * 18).toISOString(),
+      imageUrl: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&auto=format&fit=crop&q=60'
+    },
+    {
+      _id: 'mock4',
+      title: 'Softwarican Days',
+      startDate: '2026-05-14T12:00:00.000Z',
+      imageUrl: '/assets/images/softwarica.jpg.jpeg'
+    }
+  ];
+
+  const displayEvents = latestEvents.length > 0 ? latestEvents : mockEvents;
+
   return (
     <section 
       ref={sectionRef} 
       className="relative text-white overflow-hidden min-h-screen flex items-center"
       style={{
-        backgroundImage: 'url(/assets/images/1444x920_concert.webp)',
+        backgroundImage: 'url(/assets/images/hero-bg.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
@@ -129,7 +159,7 @@ const HeroSection = () => {
       />
       <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], [0, 150]) }}
-        className="absolute bottom-20 left-20 w-96 h-96 bg-orange-500/20 rounded-full blur-3xl z-0"
+        className="absolute bottom-20 left-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl z-0"
         animate={{
           x: [0, -80, 0],
           y: [0, 60, 0],
@@ -198,7 +228,7 @@ const HeroSection = () => {
               variants={textReveal}
               className="text-xl text-slate-300 mb-8 leading-relaxed"
             >
-              Create, manage, and sell tickets for your events with ease. Join thousands of organizers who trust TicketGate.
+              Create, manage, and sell tickets for your events with ease. Join thousands of organizers who trust Gatepass.
             </motion.p>
             
             <motion.div
@@ -221,7 +251,7 @@ const HeroSection = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-orange-500/20 hover:border-orange-400">
+                  <Button variant="outline" size="lg" className="w-full sm:w-auto border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-400">
                     Browse Events
                   </Button>
                 </motion.div>
@@ -277,95 +307,73 @@ const HeroSection = () => {
               className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 shadow-2xl"
             >
               <div className="grid grid-cols-2 gap-4">
-                {latestEvents.length > 0 ? (
-                  latestEvents.map((event, index) => (
-                    <Link key={event._id || index} to={`/events/${event._id}`}>
-                      <motion.div
-                        initial={{ opacity: 0, y: 30, scale: 0.8, rotate: -5 }}
-                        animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
-                        transition={{ 
-                          delay: 0.5 + index * 0.15,
-                          type: 'spring',
-                          stiffness: 200,
-                          damping: 15
-                        }}
-                        whileHover={{ scale: 1.08, rotate: 2, y: -5 }}
-                        className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl"
-                      >
-                        {/* Gradient overlay on hover */}
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-br from-orange-500/20 via-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                          initial={false}
-                        />
-                        
-                        {event.imageUrl ? (
-                          <motion.div 
-                            className="relative w-full h-24 bg-white/10 rounded-xl mb-3 overflow-hidden shadow-inner"
-                            whileHover={{ scale: 1.05 }}
-                            transition={{ duration: 0.3 }}
-                          >
-                            <img 
-                              src={event.imageUrl} 
-                              alt={event.title}
-                              className="w-full h-full object-cover"
-                            />
-                            {/* Gradient overlay on image */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                            {/* Shine effect on hover */}
-                            <motion.div
-                              className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-                              initial={{ x: '-100%' }}
-                              whileHover={{ x: '100%' }}
-                              transition={{ duration: 0.6 }}
-                            />
-                          </motion.div>
-                        ) : (
-                          <div className="relative w-full h-24 bg-gradient-to-br from-white/10 to-white/5 rounded-xl mb-3 flex items-center justify-center border border-white/10">
-                            <FiCalendar className="w-10 h-10 text-white/50 group-hover:text-white/80 transition-colors duration-300" />
-                            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
-                          </div>
-                        )}
-                        
-                        <div className="relative z-10">
-                          <div className="line-clamp-2 text-sm font-bold text-white mb-2 group-hover:text-orange-200 transition-colors duration-300">
-                            {event.title || 'Event'}
-                          </div>
-                          {event.startDate && (
-                            <div className="flex items-center gap-2">
-                              <div className="w-1 h-1 bg-orange-400 rounded-full group-hover:bg-orange-300 transition-colors" />
-                              <div className="text-xs font-medium text-white/80 group-hover:text-white transition-colors">
-                                {new Date(event.startDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                              </div>
-                            </div>
-                          )}
-                        </div>
-                        
-                        {/* Corner accent */}
-                        <div className="absolute top-2 right-2 w-2 h-2 bg-orange-400/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      </motion.div>
-                    </Link>
-                  ))
-                ) : (
-                  [1, 2, 3, 4].map((i) => (
+                {displayEvents.map((event, index) => (
+                  <Link key={event._id || index} to={event._id.startsWith('mock') ? '#' : `/events/${event._id}`}>
                     <motion.div
-                      key={i}
                       initial={{ opacity: 0, y: 30, scale: 0.8, rotate: -5 }}
                       animate={{ opacity: 1, y: 0, scale: 1, rotate: 0 }}
                       transition={{ 
-                        delay: 0.5 + i * 0.15,
+                        delay: 0.5 + index * 0.15,
                         type: 'spring',
                         stiffness: 200,
                         damping: 15
                       }}
-                      whileHover={{ scale: 1.05, rotate: 2 }}
-                      className="bg-white/5 rounded-xl p-4 border border-white/10 hover:bg-white/10 transition-colors cursor-pointer"
+                      whileHover={{ scale: 1.08, rotate: 2, y: -5 }}
+                      className="group relative bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 hover:border-white/40 hover:bg-white/15 transition-all duration-300 cursor-pointer overflow-hidden shadow-lg hover:shadow-2xl"
                     >
-                      <div className="w-full h-20 bg-white/10 rounded-lg mb-3" />
-                      <div className="h-3 bg-white/20 rounded mb-2" />
-                      <div className="h-2 bg-white/10 rounded w-2/3" />
+                      {/* Gradient overlay on hover */}
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        initial={false}
+                      />
+                      
+                      {event.imageUrl ? (
+                        <motion.div 
+                          className="relative w-full h-24 bg-white/10 rounded-xl mb-3 overflow-hidden shadow-inner"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <img 
+                            src={event.imageUrl} 
+                            alt={event.title}
+                            className="w-full h-full object-cover"
+                          />
+                          {/* Gradient overlay on image */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                          {/* Shine effect on hover */}
+                          <motion.div
+                            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                            initial={{ x: '-100%' }}
+                            whileHover={{ x: '100%' }}
+                            transition={{ duration: 0.6 }}
+                          />
+                        </motion.div>
+                      ) : (
+                        <div className="relative w-full h-24 bg-gradient-to-br from-white/10 to-white/5 rounded-xl mb-3 flex items-center justify-center border border-white/10">
+                          <FiCalendar className="w-10 h-10 text-white/50 group-hover:text-white/80 transition-colors duration-300" />
+                          <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl" />
+                        </div>
+                      )}
+                      
+                      <div className="relative z-10">
+                        <div className="line-clamp-2 text-sm font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors duration-300">
+                          {event.title || 'Event'}
+                        </div>
+                        {event.startDate && (
+                          <div className="flex items-center gap-2">
+                            <div className="w-1 h-1 bg-cyan-400 rounded-full group-hover:bg-cyan-300 transition-colors" />
+                            <div className="text-xs font-medium text-white/80 group-hover:text-white transition-colors">
+                              {new Date(event.startDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      
+                      {/* Corner accent */}
+                      <div className="absolute top-2 right-2 w-2 h-2 bg-cyan-400/50 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     </motion.div>
-                  ))
-                )}
+                  </Link>
+                ))}
               </div>
             </motion.div>
           </motion.div>

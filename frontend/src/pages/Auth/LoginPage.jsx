@@ -20,7 +20,7 @@ const LoginPage = () => {
             ease: 'easeInOut',
             delay: 0,
           }}
-          className="absolute top-20 right-10 text-orange-500/20"
+          className="absolute top-20 right-10 text-cyan-500/20"
         >
           <FiMusic className="w-16 h-16" />
         </motion.div>
@@ -52,7 +52,7 @@ const LoginPage = () => {
             ease: 'easeInOut',
             delay: 0.5,
           }}
-          className="absolute top-1/3 left-1/4 text-orange-500/15"
+          className="absolute top-1/3 left-1/4 text-cyan-500/15"
         >
           <FiHeadphones className="w-14 h-14" />
         </motion.div>
@@ -68,7 +68,7 @@ const LoginPage = () => {
             className="hidden lg:flex lg:w-2/5 relative overflow-hidden bg-black p-8 flex flex-col justify-between"
           >
             {/* Decorative gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-600/10 via-transparent to-pink-600/10"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 via-transparent to-pink-600/10"></div>
             
             {/* Animated Event Elements */}
             <div className="absolute inset-0 pointer-events-none">
@@ -85,7 +85,7 @@ const LoginPage = () => {
                   ease: 'easeInOut',
                   delay: 0.3,
                 }}
-                className="absolute top-8 right-8 text-orange-500/30"
+                className="absolute top-8 right-8 text-cyan-500/30"
               >
                 <FiMic className="w-12 h-12" />
               </motion.div>
@@ -121,7 +121,7 @@ const LoginPage = () => {
                   ease: 'easeInOut',
                   delay: 0.9,
                 }}
-                className="absolute bottom-16 left-6 text-orange-500/20"
+                className="absolute bottom-16 left-6 text-cyan-500/20"
               >
                 <FiHeadphones className="w-14 h-14" />
               </motion.div>
@@ -157,7 +157,7 @@ const LoginPage = () => {
                   ease: 'easeInOut',
                   delay: 0.4,
                 }}
-                className="absolute bottom-24 right-16 text-orange-500/25"
+                className="absolute bottom-24 right-16 text-cyan-500/25"
               >
                 <FiZap className="w-12 h-12" />
               </motion.div>
@@ -172,14 +172,14 @@ const LoginPage = () => {
                 className="mb-8"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-pink-500 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">TG</span>
+                  <div className="w-10 h-10 bg-gradient-to-br from-cyan-500 to-pink-500 rounded-lg flex items-center justify-center">
+                    <span className="text-white font-bold text-xl">GP</span>
                   </div>
                   <h1 className="text-2xl font-bold text-white uppercase tracking-wider">
-                    TicketGate
+                    Gatepass
                   </h1>
                 </div>
-                <h2 className="text-3xl font-bold text-orange-500 mb-4">
+                <h2 className="text-3xl font-bold text-cyan-500 mb-4">
                   Member Sign In.
                 </h2>
                 <div className="space-y-3 text-gray-300 text-sm leading-relaxed">
@@ -201,7 +201,7 @@ const LoginPage = () => {
               >
                 <Link
                   to="/"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-orange-600/50 bg-orange-600/10 text-white rounded-lg hover:bg-orange-600/20 transition-all group text-sm"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 border border-cyan-600/50 bg-cyan-600/10 text-white rounded-lg hover:bg-cyan-600/20 transition-all group text-sm"
                 >
                   <FiArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                   <span className="font-medium">Back to Website</span>
@@ -230,7 +230,7 @@ const LoginPage = () => {
                   repeat: Infinity,
                   ease: 'linear',
                 }}
-                className="absolute top-10 right-10 text-orange-500"
+                className="absolute top-10 right-10 text-cyan-500"
               >
                 <FiMic className="w-24 h-24" />
               </motion.div>

@@ -36,8 +36,8 @@ const OrganizerLayout = () => {
                     to={item.path}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                       isActive
-                        ? 'bg-gradient-to-r from-orange-500 to-orange-600 text-white shadow-lg'
-                        : 'text-gray-700 hover:bg-orange-50 hover:text-orange-600'
+                        ? 'bg-gradient-to-r from-cyan-500 to-cyan-600 text-white shadow-lg'
+                        : 'text-gray-700 hover:bg-cyan-50 hover:text-cyan-600'
                     }`}
                   >
                     <Icon className="h-5 w-5" />

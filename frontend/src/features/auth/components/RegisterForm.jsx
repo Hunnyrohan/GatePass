@@ -102,7 +102,7 @@ const RegisterForm = () => {
                     bg-gray-900 text-white placeholder:text-gray-500
                     ${errors.firstName && touched.firstName
                       ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                      : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                      : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                     }
                   `}
                 />
@@ -133,7 +133,7 @@ const RegisterForm = () => {
                     bg-gray-900 text-white placeholder:text-gray-500
                     ${errors.lastName && touched.lastName
                       ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                      : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                      : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                     }
                   `}
                 />
@@ -166,7 +166,7 @@ const RegisterForm = () => {
                   bg-gray-900 text-white placeholder:text-gray-500
                   ${errors.email && touched.email
                     ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                    : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                    : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                   }
                 `}
               />
@@ -202,7 +202,7 @@ const RegisterForm = () => {
                   bg-gray-900 text-white placeholder:text-gray-500
                   ${errors.password && touched.password
                     ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                    : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                    : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                   }
                 `}
               />
@@ -249,7 +249,7 @@ const RegisterForm = () => {
                   bg-gray-900 text-white placeholder:text-gray-500
                   ${errors.confirmPassword && touched.confirmPassword
                     ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                    : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                    : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                   }
                 `}
               />
@@ -281,7 +281,7 @@ const RegisterForm = () => {
                   bg-gray-900 text-white placeholder:text-gray-500
                   ${errors.phone && touched.phone
                     ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                    : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                    : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                   }
                 `}
               />
@@ -314,7 +314,7 @@ const RegisterForm = () => {
                   bg-gray-900 text-white
                   ${errors.role && touched.role
                     ? 'border-red-500 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
-                    : 'border-gray-700 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+                    : 'border-gray-700 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
                   }
                 `}
               >
@@ -348,7 +348,7 @@ const RegisterForm = () => {
               disabled={isRegistering}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="w-full bg-orange-600 hover:bg-orange-700 text-white py-3 rounded-lg font-semibold text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wide"
+              className="w-full bg-cyan-600 hover:bg-cyan-700 text-white py-3 rounded-lg font-semibold text-base transition-colors disabled:opacity-50 disabled:cursor-not-allowed uppercase tracking-wide"
             >
               {isRegistering ? 'Creating Account...' : 'Sign Up'}
             </motion.button>
@@ -399,7 +399,7 @@ const RegisterForm = () => {
               Already have an account?{' '}
               <Link
                 to="/login"
-                className="text-orange-500 hover:text-orange-400 font-medium transition-colors"
+                className="text-cyan-500 hover:text-cyan-400 font-medium transition-colors"
               >
                 Sign in.
               </Link>
@@ -414,12 +414,12 @@ const RegisterForm = () => {
             className="text-center pt-8"
           >
             <p className="text-xs text-gray-500">
-              By processing, I agree to TicketGate's{' '}
-              <Link to="/terms" className="text-orange-500 hover:text-orange-400 transition-colors">
+              By processing, I agree to Gatepass's{' '}
+              <Link to="/terms" className="text-cyan-500 hover:text-cyan-400 transition-colors">
                 Terms of Use
               </Link>
               {' '}and{' '}
-              <Link to="/privacy" className="text-orange-500 hover:text-orange-400 transition-colors">
+              <Link to="/privacy" className="text-cyan-500 hover:text-cyan-400 transition-colors">
                 Privacy Policy
               </Link>
             </p>

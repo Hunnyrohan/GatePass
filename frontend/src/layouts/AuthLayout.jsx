@@ -18,7 +18,7 @@ const AuthLayout = () => {
         }} />
 
         {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-orange-50/20 pointer-events-none" />
+        <div className="absolute inset-0 bg-cyan-50/20 pointer-events-none" />
 
         <div className="w-full max-w-7xl mx-auto relative z-10">
           {/* Page content */}

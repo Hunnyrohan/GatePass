@@ -24,8 +24,8 @@ const SalesChart = ({ data = [], className = '' }) => {
         <AreaChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
           <defs>
             <linearGradient id="colorSales" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="#f97316" stopOpacity={0.8}/>
-              <stop offset="95%" stopColor="#f97316" stopOpacity={0}/>
+              <stop offset="5%" stopColor="#06b6d4" stopOpacity={0.8}/>
+              <stop offset="95%" stopColor="#06b6d4" stopOpacity={0}/>
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
@@ -50,7 +50,7 @@ const SalesChart = ({ data = [], className = '' }) => {
           <Area 
             type="monotone" 
             dataKey="sales" 
-            stroke="#f97316" 
+            stroke="#06b6d4" 
             fillOpacity={1} 
             fill="url(#colorSales)" 
             strokeWidth={2}

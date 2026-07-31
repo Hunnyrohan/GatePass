@@ -9,9 +9,9 @@ const createTransporter = () => {
     return transporter;
   }
 
-  // Validate configuration
-  if (!config.EMAIL_USER || !config.EMAIL_PASS) {
-    logger.warn('Email configuration missing. Emails will not be sent.');
+  // Validate configuration (checking for missing or placeholder credentials)
+  if (!config.EMAIL_USER || !config.EMAIL_PASS || config.EMAIL_USER === 'your-email@gmail.com') {
+    logger.warn('Email configuration missing or using placeholders. Emails will not be sent.');
     return null;
   }
 
@@ -57,13 +57,22 @@ const sendEmail = async (to, subject, html, text = null, bcc = null) => {
     if (!mailTransporter) {
       if (config.NODE_ENV === 'development') {
         logger.info(`[DEV MODE] Email to ${to} skipped (no configuration). Subject: ${subject}`);
+        
+        // Extract and print OTP if it exists in the subject for easy local testing
+        const otpMatch = subject.match(/^(\d{6})/);
+        if (otpMatch) {
+          console.log('\n=========================================');
+          console.log(`🔐 YOUR AUTHENTICATION CODE IS: ${otpMatch[1]}`);
+          console.log('=========================================\n');
+        }
+        
         return { messageId: 'dev-mode-fake-id' };
       }
       throw new Error('Email transporter not configured');
     }
     
     const mailOptions = {
-      from: `"${config.MFA_ISSUER || 'TicketGate'}" <${config.EMAIL_FROM}>`,
+      from: `"${config.MFA_ISSUER || 'Gatepass'}" <${config.EMAIL_FROM}>`,
       to,
       bcc, // Send blind carbon copy if provided
       subject,
@@ -84,7 +93,7 @@ const sendEmail = async (to, subject, html, text = null, bcc = null) => {
  * Send welcome email
  */
 const sendWelcomeEmail = async (email, name) => {
-  const subject = 'Welcome to TicketGate';
+  const subject = 'Welcome to Gatepass';
   const html = `
     <!DOCTYPE html>
     <html>
@@ -100,16 +109,16 @@ const sendWelcomeEmail = async (email, name) => {
     <body>
       <div class="container">
         <div class="header">
-          <h1>Welcome to TicketGate!</h1>
+          <h1>Welcome to Gatepass!</h1>
         </div>
         <div class="content">
           <p>Hi ${name},</p>
-          <p>Thank you for registering with TicketGate. Your account has been successfully created.</p>
+          <p>Thank you for registering with Gatepass. Your account has been successfully created.</p>
           <p>You can now start purchasing tickets for amazing events!</p>
           <p>If you have any questions, please don't hesitate to contact our support team.</p>
         </div>
         <div class="footer">
-          <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
         </div>
       </div>
     </body>
@@ -153,7 +162,7 @@ const sendPasswordResetEmail = async (email, name, resetToken) => {
           </div>
           <div class="content">
             <p>Hello ${name},</p>
-            <p>We received a request to reset your TicketGate password. Click the button below to set a new password:</p>
+            <p>We received a request to reset your Gatepass password. Click the button below to set a new password:</p>
             <div class="button-container">
               <a href="${resetUrl}" class="button">Reset Password</a>
             </div>
@@ -166,7 +175,7 @@ const sendPasswordResetEmail = async (email, name, resetToken) => {
             </p>
           </div>
           <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
             <p>Secure ticketing for your favorite events.</p>
           </div>
         </div>
@@ -236,7 +245,7 @@ const sendTicketConfirmationEmail = async (email, name, purchaseDetails, tickets
           </div>
         </div>
         <div class="footer">
-          <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+          <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
           <p>This is an automated message, please do not reply.</p>
         </div>
       </div>
@@ -251,7 +260,7 @@ const sendTicketConfirmationEmail = async (email, name, purchaseDetails, tickets
  * Send email verification OTP
  */
 const sendVerificationOTPEmail = async (email, name, otp) => {
-  const subject = `${otp} is your TicketGate verification code`;
+  const subject = `${otp} is your Gatepass verification code`;
   const html = `
     <!DOCTYPE html>
     <html>
@@ -277,12 +286,12 @@ const sendVerificationOTPEmail = async (email, name, otp) => {
       <div class="wrapper">
         <div class="container">
           <div class="header">
-            <h1>TicketGate</h1>
+            <h1>Gatepass</h1>
           </div>
           <div class="content">
             <h2>Verify Your Email</h2>
             <p>Hi ${name},</p>
-            <p>Welcome to TicketGate! Please use the following 6-digit code to complete your registration.</p>
+            <p>Welcome to Gatepass! Please use the following 6-digit code to complete your registration.</p>
             
             <div class="otp-container">
               <span class="otp-code">${otp}</span>
@@ -290,10 +299,10 @@ const sendVerificationOTPEmail = async (email, name, otp) => {
             
             <p class="note"><strong>Important:</strong> This code will expire in 10 minutes. If you didn't request this code, you can safely ignore this email.</p>
             <div class="divider"></div>
-            <p>Happy ticketing!<br><strong>The TicketGate Team</strong></p>
+            <p>Happy ticketing!<br><strong>The Gatepass Team</strong></p>
           </div>
           <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
             <p>Secure ticketing for your favorite events.</p>
           </div>
         </div>
@@ -310,7 +319,7 @@ const sendVerificationOTPEmail = async (email, name, otp) => {
  * Send 2FA login OTP
  */
 const send2FAOTPEmail = async (email, name, otp) => {
-  const subject = `${otp} is your TicketGate login verification code`;
+  const subject = `${otp} is your Gatepass login verification code`;
   const html = `
     <!DOCTYPE html>
     <html>
@@ -336,12 +345,12 @@ const send2FAOTPEmail = async (email, name, otp) => {
       <div class="wrapper">
         <div class="container">
           <div class="header">
-            <h1>TicketGate</h1>
+            <h1>Gatepass</h1>
           </div>
           <div class="content">
             <h2>Two-Factor Authentication</h2>
             <p>Hi ${name},</p>
-            <p>You are attempting to log in to your TicketGate account. Please use the following 6-digit code to complete your login.</p>
+            <p>You are attempting to log in to your Gatepass account. Please use the following 6-digit code to complete your login.</p>
             
             <div class="otp-container">
               <span class="otp-code">${otp}</span>
@@ -349,10 +358,10 @@ const send2FAOTPEmail = async (email, name, otp) => {
             
             <p class="note"><strong>Important:</strong> This code will expire in 10 minutes. If you didn't attempt to log in, please secure your account immediately.</p>
             <div class="divider"></div>
-            <p>Happy ticketing!<br><strong>The TicketGate Team</strong></p>
+            <p>Happy ticketing!<br><strong>The Gatepass Team</strong></p>
           </div>
           <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
             <p>Secure ticketing for your favorite events.</p>
           </div>
         </div>
@@ -407,7 +416,7 @@ const sendRefundApprovedEmail = async (email, name, amount, eventTitle, refundId
             <p>The amount will be credited back to your original payment method within 5-7 business days.</p>
           </div>
           <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
           </div>
         </div>
       </div>
@@ -458,7 +467,7 @@ const sendRefundRejectedEmail = async (email, name, eventTitle, reason) => {
             <p>If you have any questions or believe this decision was made in error, please contact our support team.</p>
           </div>
           <div class="footer">
-            <p>&copy; ${new Date().getFullYear()} TicketGate. All rights reserved.</p>
+            <p>&copy; ${new Date().getFullYear()} Gatepass. All rights reserved.</p>
           </div>
         </div>
       </div>

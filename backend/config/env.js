@@ -6,7 +6,7 @@ module.exports = {
   PORT: process.env.PORT || 3000,
   
   // MongoDB
-  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/ticketgate',
+  MONGODB_URI: process.env.MONGODB_URI || 'mongodb://localhost:27017/gatepass',
   
   // Redis
   REDIS_HOST: process.env.REDIS_HOST || 'localhost',
@@ -66,7 +66,7 @@ module.exports = {
   RATE_LIMIT_AUTH_MAX: parseInt(process.env.RATE_LIMIT_AUTH_MAX || '5'),
   
   // MFA
-  MFA_ISSUER: process.env.MFA_ISSUER || 'TicketGate',
+  MFA_ISSUER: process.env.MFA_ISSUER || 'Gatepass',
   MFA_WINDOW: parseInt(process.env.MFA_WINDOW || '1'),
   
   // Cloudinary

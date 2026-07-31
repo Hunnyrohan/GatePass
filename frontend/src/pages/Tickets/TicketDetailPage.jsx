@@ -51,14 +51,14 @@ const TicketDetailPage = () => {
         className="relative"
       >
         {/* Decorative Ticket Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500 to-orange-700 rounded-3xl transform rotate-1 opacity-10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-3xl transform rotate-1 opacity-10"></div>
 
-        <Card className="p-0 overflow-hidden rounded-3xl border-2 border-orange-100 shadow-2xl relative">
+        <Card className="p-0 overflow-hidden rounded-3xl border-2 border-cyan-100 shadow-2xl relative">
           {/* Top Perforation / Header */}
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 p-8 text-white relative">
             <div className="flex flex-col md:flex-row justify-between items-start gap-6">
               <div className="flex-1">
-                <span className="inline-block px-3 py-1 rounded-full bg-orange-500 text-xs font-bold uppercase tracking-wider mb-4">
+                <span className="inline-block px-3 py-1 rounded-full bg-cyan-500 text-xs font-bold uppercase tracking-wider mb-4">
                   Official Ticket
                 </span>
                 <h1 className="text-3xl md:text-4xl font-black mb-2 leading-tight">
@@ -66,12 +66,12 @@ const TicketDetailPage = () => {
                 </h1>
                 <div className="flex flex-wrap items-center gap-4 text-gray-300">
                   <div className="flex items-center gap-2">
-                    <FiCalendar className="w-4 h-4 text-orange-400" />
+                    <FiCalendar className="w-4 h-4 text-cyan-400" />
                     <span>{formatDateTime(ticket.event?.startDate)}</span>
                   </div>
                   {ticket.event?.venue && (
                     <div className="flex items-center gap-2">
-                      <FiMapPin className="w-4 h-4 text-orange-400" />
+                      <FiMapPin className="w-4 h-4 text-cyan-400" />
                       <span>{ticket.event.venue.name}</span>
                     </div>
                   )}
@@ -107,7 +107,7 @@ const TicketDetailPage = () => {
                   <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
                     <p className="text-gray-500 font-bold uppercase tracking-widest text-[10px] mb-2">Ticket Type</p>
                     <p className="font-bold text-lg text-gray-900">{ticket.ticketTypeId?.name || ticket.ticketType?.name}</p>
-                    <p className="text-orange-600 font-bold">NPR {ticket.ticketTypeId?.price || 0}</p>
+                    <p className="text-cyan-600 font-bold">NPR {ticket.ticketTypeId?.price || 0}</p>
                   </div>
                   <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
                     <p className="text-gray-500 font-bold uppercase tracking-widest text-[10px] mb-2">Order ID</p>
@@ -157,7 +157,7 @@ const TicketDetailPage = () => {
                 <div className="mt-8 text-center">
                   <motion.button
                     onClick={() => window.print()}
-                    className="flex items-center gap-2 px-6 py-2 bg-gray-900 text-white rounded-full font-bold text-sm shadow-lg hover:bg-orange-600 transition-colors"
+                    className="flex items-center gap-2 px-6 py-2 bg-gray-900 text-white rounded-full font-bold text-sm shadow-lg hover:bg-cyan-600 transition-colors"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -171,7 +171,7 @@ const TicketDetailPage = () => {
 
         {/* Support Link */}
         <p className="mt-8 text-center text-sm text-gray-500">
-          Need help? <Link to="/support" className="text-orange-600 font-bold hover:underline">Contact ticket support</Link>
+          Need help? <Link to="/support" className="text-cyan-600 font-bold hover:underline">Contact ticket support</Link>
         </p>
       </motion.div>
     </div>

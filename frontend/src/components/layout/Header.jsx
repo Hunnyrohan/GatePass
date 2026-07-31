@@ -60,14 +60,14 @@ const Header = () => {
               to="/events"
               className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                 isActive('/events')
-                  ? 'text-orange-600 bg-orange-50'
-                  : 'text-gray-700 hover:text-orange-600 hover:bg-gray-50'
+                  ? 'text-cyan-600 bg-cyan-50'
+                  : 'text-gray-700 hover:text-cyan-600 hover:bg-gray-50'
               }`}
             >
               {isActive('/events') && (
                 <motion.div
                   layoutId="activeTab"
-                  className="absolute inset-0 bg-orange-50 rounded-lg"
+                  className="absolute inset-0 bg-cyan-50 rounded-lg"
                   initial={false}
                   transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                 />
@@ -81,14 +81,14 @@ const Header = () => {
                   to={getDashboardRoute()}
                   className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                     isDashboardActive()
-                      ? 'text-orange-600 bg-orange-50'
-                      : 'text-gray-700 hover:text-orange-600 hover:bg-gray-50'
+                      ? 'text-cyan-600 bg-cyan-50'
+                      : 'text-gray-700 hover:text-cyan-600 hover:bg-gray-50'
                   }`}
                 >
                   {isDashboardActive() && (
                     <motion.div
                       layoutId="activeTab"
-                      className="absolute inset-0 bg-orange-50 rounded-lg"
+                      className="absolute inset-0 bg-cyan-50 rounded-lg"
                       initial={false}
                       transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                     />
@@ -100,14 +100,14 @@ const Header = () => {
                     to="/events/create"
                     className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                       isActive('/events/create')
-                        ? 'text-orange-600 bg-orange-50'
-                        : 'text-gray-700 hover:text-orange-600 hover:bg-gray-50'
+                        ? 'text-cyan-600 bg-cyan-50'
+                        : 'text-gray-700 hover:text-cyan-600 hover:bg-gray-50'
                     }`}
                   >
                     {isActive('/events/create') && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-orange-50 rounded-lg"
+                        className="absolute inset-0 bg-cyan-50 rounded-lg"
                         initial={false}
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
@@ -120,14 +120,14 @@ const Header = () => {
                     to="/checkin"
                     className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                       isActive('/checkin')
-                        ? 'text-orange-600 bg-orange-50'
-                        : 'text-gray-700 hover:text-orange-600 hover:bg-gray-50'
+                        ? 'text-cyan-600 bg-cyan-50'
+                        : 'text-gray-700 hover:text-cyan-600 hover:bg-gray-50'
                     }`}
                   >
                     {isActive('/checkin') && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-orange-50 rounded-lg"
+                        className="absolute inset-0 bg-cyan-50 rounded-lg"
                         initial={false}
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
@@ -140,14 +140,14 @@ const Header = () => {
                     to="/admin"
                     className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
                       isActive('/admin')
-                        ? 'text-orange-600 bg-orange-50'
-                        : 'text-gray-700 hover:text-orange-600 hover:bg-gray-50'
+                        ? 'text-cyan-600 bg-cyan-50'
+                        : 'text-gray-700 hover:text-cyan-600 hover:bg-gray-50'
                     }`}
                   >
                     {isActive('/admin') && (
                       <motion.div
                         layoutId="activeTab"
-                        className="absolute inset-0 bg-orange-50 rounded-lg"
+                        className="absolute inset-0 bg-cyan-50 rounded-lg"
                         initial={false}
                         transition={{ type: 'spring', stiffness: 500, damping: 30 }}
                       />
@@ -169,18 +169,18 @@ const Header = () => {
                     whileTap={{ scale: 0.9 }}
                     className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
                   >
-                    <Cog6ToothIcon className="h-5 w-5 text-gray-600 hover:text-orange-600 transition-colors" />
+                    <Cog6ToothIcon className="h-5 w-5 text-gray-600 hover:text-cyan-600 transition-colors" />
                   </motion.div>
                 </Link>
                 <div className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors">
-                  <UserCircleIcon className="h-5 w-5 text-orange-600" />
+                  <UserCircleIcon className="h-5 w-5 text-cyan-600" />
                   <span className="text-sm font-semibold text-gray-800">{user?.firstName}</span>
                 </div>
                 <Button 
                   variant="outline" 
                   size="sm" 
                   onClick={handleLogout}
-                  className="border-orange-200 text-orange-600 hover:bg-orange-50 hover:border-orange-300"
+                  className="border-cyan-200 text-cyan-600 hover:bg-cyan-50 hover:border-cyan-300"
                 >
                   Logout
                 </Button>
@@ -191,7 +191,7 @@ const Header = () => {
                   <Button 
                     variant="ghost" 
                     size="sm"
-                    className="text-gray-700 hover:text-orange-600 hover:bg-orange-50"
+                    className="text-gray-700 hover:text-cyan-600 hover:bg-cyan-50"
                   >
                     Login
                   </Button>
@@ -199,7 +199,7 @@ const Header = () => {
                 <Link to="/register">
                   <Button 
                     size="sm"
-                    className="bg-orange-600 text-white hover:bg-orange-700 shadow-md hover:shadow-lg transition-all"
+                    className="bg-cyan-600 text-white hover:bg-cyan-700 shadow-md hover:shadow-lg transition-all"
                   >
                     Sign Up
                   </Button>

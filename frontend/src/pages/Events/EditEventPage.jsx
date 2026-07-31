@@ -426,7 +426,7 @@ const EditEventPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -436,7 +436,7 @@ const EditEventPage = () => {
         >
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
                 Edit Event
               </h1>
               <p className="text-gray-600 text-lg">Update your event details</p>
@@ -469,7 +469,7 @@ const EditEventPage = () => {
               >
                 <Card className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <span className="w-1 h-8 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full"></span>
+                    <span className="w-1 h-8 bg-gradient-to-b from-cyan-500 to-cyan-600 rounded-full"></span>
                     Basic Information
                   </h2>
 
@@ -494,7 +494,7 @@ const EditEventPage = () => {
                         name="description"
                         as="textarea"
                         rows={6}
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none resize-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none resize-none"
                         placeholder="Describe your event in detail..."
                         error={errors.description && touched.description ? errors.description : null}
                       />
@@ -510,7 +510,7 @@ const EditEventPage = () => {
                       <Field
                         name="category"
                         as="select"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none"
                       >
                         <option value="">Select a category</option>
                         {categories.map((cat) => (
@@ -535,7 +535,7 @@ const EditEventPage = () => {
               >
                 <Card className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <FiCalendar className="w-6 h-6 text-orange-600" />
+                    <FiCalendar className="w-6 h-6 text-cyan-600" />
                     Date & Time
                   </h2>
 
@@ -547,7 +547,7 @@ const EditEventPage = () => {
                       <Field
                         name="startDate"
                         type="datetime-local"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none"
                       />
                       {errors.startDate && touched.startDate && (
                         <p className="mt-1 text-sm text-red-500">{errors.startDate}</p>
@@ -561,7 +561,7 @@ const EditEventPage = () => {
                       <Field
                         name="endDate"
                         type="datetime-local"
-                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none"
+                        className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none"
                       />
                       {errors.endDate && touched.endDate && (
                         <p className="mt-1 text-sm text-red-500">{errors.endDate}</p>
@@ -579,7 +579,7 @@ const EditEventPage = () => {
               >
                 <Card className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <FiMapPin className="w-6 h-6 text-orange-600" />
+                    <FiMapPin className="w-6 h-6 text-cyan-600" />
                     Venue Information
                   </h2>
 
@@ -660,7 +660,7 @@ const EditEventPage = () => {
               >
                 <Card className="p-6">
                   <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-                    <FiImage className="w-6 h-6 text-orange-600" />
+                    <FiImage className="w-6 h-6 text-cyan-600" />
                     Event Images (Optional)
                   </h2>
                   <div className="space-y-4">
@@ -735,7 +735,7 @@ const EditEventPage = () => {
                 <Card className="p-6">
                   <div className="flex items-center justify-between mb-6">
                     <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                      <FiTag className="w-6 h-6 text-orange-600" />
+                      <FiTag className="w-6 h-6 text-cyan-600" />
                       Ticket Types
                     </h2>
                   </div>
@@ -851,7 +851,7 @@ const EditEventPage = () => {
                                   name={`ticketTypes.${index}.description`}
                                   as="textarea"
                                   rows={2}
-                                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none resize-none"
+                                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none resize-none"
                                   placeholder="Brief description of this ticket type"
                                 />
                               </div>

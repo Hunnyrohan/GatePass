@@ -12,5 +12,5 @@ export { default as IntegrationsSection } from './IntegrationsSection';
 export { default as CTASection } from './CTASection';
 export { default as SplashScreen } from './SplashScreen';
 export { default as AnimatedText } from './AnimatedText';
-export { default as TicketGateLogo } from './TicketGateLogo';
+export { default as GatepassLogo } from './GatepassLogo';
 

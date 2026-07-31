@@ -83,7 +83,7 @@ class PayPalService {
             }
           ],
           application_context: {
-            brand_name: orderData.brandName || 'TicketGate',
+            brand_name: orderData.brandName || 'Gatepass',
             landing_page: 'BILLING',
             user_action: 'PAY_NOW',
             return_url: orderData.returnUrl,

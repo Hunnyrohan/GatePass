@@ -30,7 +30,7 @@ const ConfirmationPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-orange-50 flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-cyan-50 flex items-center justify-center py-12 px-4">
       <div className="max-w-4xl w-full">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -76,7 +76,7 @@ const ConfirmationPage = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-600">Total Amount:</span>
-                    <span className="font-bold text-2xl text-orange-600">
+                    <span className="font-bold text-2xl text-cyan-600">
                       {formatCurrency(purchase.totalAmount || 0)}
                     </span>
                   </div>

@@ -35,7 +35,7 @@ const DashboardLayout = () => {
                     to={item.path}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-xl transition-all duration-200 ${
                       isActive
-                        ? 'bg-orange-600 text-white shadow-lg'
+                        ? 'bg-cyan-600 text-white shadow-lg'
                         : 'text-gray-700 hover:bg-gray-100'
                     }`}
                   >

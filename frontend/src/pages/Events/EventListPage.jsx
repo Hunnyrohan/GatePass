@@ -92,7 +92,7 @@ const EventListPage = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Card className="p-12 text-center">
             <p className="text-red-600 mb-4">Error loading events</p>
@@ -104,7 +104,7 @@ const EventListPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -112,7 +112,7 @@ const EventListPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
             Discover Events
           </h1>
           <p className="text-gray-600 text-lg">Find exciting events happening near you</p>
@@ -132,14 +132,14 @@ const EventListPage = () => {
               placeholder="Search events..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none"
+              className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none"
             />
           </div>
           <div className="w-full sm:w-64">
             <select
               value={categoryFilter}
               onChange={(e) => setCategoryFilter(e.target.value)}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 outline-none"
+              className="w-full px-4 py-3 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20 outline-none"
             >
               {categories.map(cat => (
                 <option key={cat} value={cat}>
@@ -193,13 +193,13 @@ const EventListPage = () => {
                         />
                       </motion.div>
                     ) : (
-                      <div className="w-full h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                      <div className="w-full h-48 bg-gradient-to-br from-cyan-400 to-cyan-600 flex items-center justify-center">
                         <FiCalendar className="w-16 h-16 text-white opacity-50" />
                       </div>
                     )}
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-3">
-                        <h3 className="text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-orange-600 transition-colors flex-1">
+                        <h3 className="text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-cyan-600 transition-colors flex-1">
                           {event.title}
                         </h3>
                         {event.category && (

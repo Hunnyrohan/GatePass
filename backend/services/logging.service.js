@@ -34,7 +34,7 @@ const consoleFormat = winston.format.combine(
 const logger = winston.createLogger({
   level: config.NODE_ENV === 'production' ? 'info' : 'debug',
   format: logFormat,
-  defaultMeta: { service: 'ticketgate-api' },
+  defaultMeta: { service: 'gatepass-api' },
   transports: [
     // Write all logs to combined.log
     new winston.transports.File({

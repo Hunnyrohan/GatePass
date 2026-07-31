@@ -132,7 +132,7 @@ const UserManagementPage = () => {
                 setSearchTerm(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             />
           </div>
 
@@ -145,7 +145,7 @@ const UserManagementPage = () => {
                 setRoleFilter(e.target.value);
                 setPage(1);
               }}
-              className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               <option value="">All Roles</option>
               <option value={ROLES.ADMIN}>Admin</option>
@@ -197,7 +197,7 @@ const UserManagementPage = () => {
                   <tr key={userId} className="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td className="px-6 py-4 whitespace-nowrap">
                       <div className="flex items-center">
-                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-orange-500 flex items-center justify-center text-white font-medium">
+                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-cyan-500 flex items-center justify-center text-white font-medium">
                           {user.firstName?.[0]?.toUpperCase() || 'U'}
                         </div>
                         <div className="ml-4">
@@ -311,7 +311,7 @@ const UserManagementPage = () => {
                       ) : (
                         <button
                           onClick={() => handleEdit(user)}
-                          className="text-orange-600 hover:text-orange-900 dark:text-orange-400 dark:hover:text-orange-300 flex items-center"
+                          className="text-cyan-600 hover:text-cyan-900 dark:text-cyan-400 dark:hover:text-cyan-300 flex items-center"
                         >
                           <PencilIcon className="h-4 w-4 mr-1" />
                           Edit

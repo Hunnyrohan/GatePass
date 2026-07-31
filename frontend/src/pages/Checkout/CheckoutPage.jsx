@@ -176,7 +176,7 @@ const CheckoutPage = () => {
 
   if (!eventId || !tickets || tickets.length === 0) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 flex items-center justify-center">
         <Card className="p-12 text-center max-w-md">
           <p className="text-gray-600 mb-4">No tickets selected</p>
           <Button onClick={() => navigate('/events')}>Browse Events</Button>
@@ -191,7 +191,7 @@ const CheckoutPage = () => {
 
   if (!event) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 flex items-center justify-center">
         <Card className="p-12 text-center max-w-md">
           <p className="text-gray-600 mb-4">Event not found</p>
           <Button onClick={() => navigate('/events')}>Browse Events</Button>
@@ -220,7 +220,7 @@ const CheckoutPage = () => {
   };
   
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-orange-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-cyan-50/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Back Button */}
         <motion.button
@@ -228,7 +228,7 @@ const CheckoutPage = () => {
           animate={{ opacity: 1, x: 0 }}
           whileHover={{ x: -5 }}
           onClick={() => navigate(-1)}
-          className="mb-8 inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 transition-colors group"
+          className="mb-8 inline-flex items-center gap-2 text-gray-600 hover:text-cyan-600 transition-colors group"
         >
           <FiArrowLeft className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
           <span className="font-medium">Back</span>
@@ -245,7 +245,7 @@ const CheckoutPage = () => {
               <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-2">
                 Checkout
               </h1>
-              <div className="h-1 w-24 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full"></div>
+              <div className="h-1 w-24 bg-gradient-to-r from-cyan-500 to-cyan-600 rounded-full"></div>
             </motion.div>
 
             <Card className="p-8 md:p-10 shadow-xl border-0 bg-white/80 backdrop-blur-sm">
@@ -277,8 +277,8 @@ const CheckoutPage = () => {
                     <h3 className="font-bold text-gray-900 text-xl mb-4">{event.title}</h3>
                     <div className="space-y-3">
                       <div className="flex items-start gap-3">
-                        <div className="p-2 bg-orange-100 rounded-lg mt-0.5">
-                          <FiCalendar className="w-5 h-5 text-orange-600" />
+                        <div className="p-2 bg-cyan-100 rounded-lg mt-0.5">
+                          <FiCalendar className="w-5 h-5 text-cyan-600" />
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Date & Time</p>
@@ -310,7 +310,7 @@ const CheckoutPage = () => {
                 className="mb-8 pb-8 border-b-2 border-gray-200"
               >
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <div className="p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg">
+                  <div className="p-2 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg">
                     <FiTag className="w-5 h-5 text-white" />
                   </div>
                   Ticket Summary
@@ -322,10 +322,10 @@ const CheckoutPage = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 + index * 0.1 }}
-                      className="flex items-center justify-between p-5 rounded-xl bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-orange-300 hover:shadow-md transition-all"
+                      className="flex items-center justify-between p-5 rounded-xl bg-gradient-to-br from-gray-50 to-white border-2 border-gray-200 hover:border-cyan-300 hover:shadow-md transition-all"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="p-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl">
+                        <div className="p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl">
                           <FiTag className="w-5 h-5 text-white" />
                         </div>
                         <div>
@@ -333,7 +333,7 @@ const CheckoutPage = () => {
                           <p className="text-sm text-gray-600 font-medium">{ticket.quantity} {ticket.quantity === 1 ? 'ticket' : 'tickets'}</p>
                         </div>
                       </div>
-                      <p className="font-bold text-2xl bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                      <p className="font-bold text-2xl bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                         {formatCurrency(ticket.price * ticket.quantity)}
                       </p>
                     </motion.div>
@@ -416,7 +416,7 @@ const CheckoutPage = () => {
                   <Button
                     type="submit"
                     variant="primary"
-                    className="w-full py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800"
+                    className="w-full py-4 text-lg font-bold shadow-xl hover:shadow-2xl transition-all duration-300 bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800"
                     disabled={createPurchaseMutation.isPending || initiateEsewaMutation.isPending || initiatePayPalMutation.isPending}
                   >
                     {createPurchaseMutation.isPending ? (
@@ -443,16 +443,16 @@ const CheckoutPage = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
             >
-              <Card className="sticky top-8 p-0 shadow-2xl border-0 bg-gradient-to-br from-white via-white to-orange-50/30 backdrop-blur-sm overflow-hidden">
+              <Card className="sticky top-8 p-0 shadow-2xl border-0 bg-gradient-to-br from-white via-white to-cyan-50/30 backdrop-blur-sm overflow-hidden">
                 {/* Header */}
-                <div className="p-6 md:p-8 bg-gradient-to-br from-orange-600 to-orange-700 text-white">
+                <div className="p-6 md:p-8 bg-gradient-to-br from-cyan-600 to-cyan-700 text-white">
                   <div className="flex items-center gap-3 mb-2">
                     <div className="p-2.5 bg-white/20 backdrop-blur-sm rounded-xl">
                       <FiTag className="w-6 h-6" />
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold">Order Summary</h2>
                   </div>
-                  <p className="text-orange-100 text-sm">Review your order</p>
+                  <p className="text-cyan-100 text-sm">Review your order</p>
                 </div>
 
                 {/* Content */}
@@ -460,7 +460,7 @@ const CheckoutPage = () => {
                   <div className="space-y-4 mb-6">
                     <div className="flex justify-between items-center p-4 rounded-xl bg-gradient-to-br from-gray-50 to-white border border-gray-200">
                       <div className="flex items-center gap-3">
-                        <FiTag className="w-5 h-5 text-orange-600" />
+                        <FiTag className="w-5 h-5 text-cyan-600" />
                         <span className="font-semibold text-gray-700">Tickets ({totalTickets})</span>
                       </div>
                       <span className="font-bold text-gray-900 text-lg">{formatCurrency(totalAmount)}</span>
@@ -470,7 +470,7 @@ const CheckoutPage = () => {
                   <div className="border-t-2 border-gray-200 pt-6 space-y-4">
                     <div className="flex justify-between items-center">
                       <span className="text-lg font-bold text-gray-900">Total</span>
-                      <span className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                      <span className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                         {formatCurrency(totalAmount)}
                       </span>
                     </div>

@@ -34,7 +34,7 @@ const CTASection = () => {
       />
       <motion.div
         style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
-        className="absolute bottom-0 left-0 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl"
+        className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"
         animate={{
           x: [0, -50, 0],
           y: [0, 30, 0],
@@ -73,7 +73,7 @@ const CTASection = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto"
           >
-            Join thousands of event organizers who trust TicketGate for their ticketing needs. Start for free today.
+            Join thousands of event organizers who trust Gatepass for their ticketing needs. Start for free today.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -87,7 +87,7 @@ const CTASection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button size="lg" variant="secondary" className="!bg-white !text-slate-900 hover:!bg-orange-50 hover:!text-orange-700 group border-0">
+                <Button size="lg" variant="secondary" className="!bg-white !text-slate-900 hover:!bg-cyan-50 hover:!text-cyan-700 group border-0">
                   Create Free Account
                   <FiArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -98,7 +98,7 @@ const CTASection = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-orange-500/20 hover:border-orange-400">
+                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-cyan-500/20 hover:border-cyan-400">
                   Browse Events
                 </Button>
               </motion.div>

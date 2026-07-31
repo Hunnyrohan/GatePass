@@ -131,7 +131,7 @@ const createEvent = async (req, res, next) => {
     // Upload images to Cloudinary if provided
     try {
       if (eventData.imageUrl) {
-        const imageResult = await uploadImage(eventData.imageUrl, 'ticketgate/events');
+        const imageResult = await uploadImage(eventData.imageUrl, 'gatepass/events');
         if (imageResult && imageResult.secure_url) {
           eventData.imageUrl = imageResult.secure_url;
           logger.info('Event image uploaded to Cloudinary');
@@ -139,7 +139,7 @@ const createEvent = async (req, res, next) => {
       }
 
       if (eventData.bannerUrl) {
-        const bannerResult = await uploadImage(eventData.bannerUrl, 'ticketgate/events');
+        const bannerResult = await uploadImage(eventData.bannerUrl, 'gatepass/events');
         if (bannerResult && bannerResult.secure_url) {
           eventData.bannerUrl = bannerResult.secure_url;
           logger.info('Event banner uploaded to Cloudinary');
@@ -261,7 +261,7 @@ const updateEvent = async (req, res, next) => {
     // Upload new images to Cloudinary if provided
     try {
       if (updateData.imageUrl && updateData.imageUrl !== event.imageUrl) {
-        const imageResult = await uploadImage(updateData.imageUrl, 'ticketgate/events');
+        const imageResult = await uploadImage(updateData.imageUrl, 'gatepass/events');
         if (imageResult && imageResult.secure_url) {
           updateData.imageUrl = imageResult.secure_url;
           logger.info('Event image updated in Cloudinary');
@@ -269,7 +269,7 @@ const updateEvent = async (req, res, next) => {
       }
 
       if (updateData.bannerUrl && updateData.bannerUrl !== event.bannerUrl) {
-        const bannerResult = await uploadImage(updateData.bannerUrl, 'ticketgate/events');
+        const bannerResult = await uploadImage(updateData.bannerUrl, 'gatepass/events');
         if (bannerResult && bannerResult.secure_url) {
           updateData.bannerUrl = bannerResult.secure_url;
           logger.info('Event banner updated in Cloudinary');

@@ -63,7 +63,7 @@ const AdminDashboardPage = () => {
       title: 'Tickets Sold',
       value: stats.totalTicketsSold?.toLocaleString() || '0',
       icon: TicketIcon,
-      color: 'bg-orange-500',
+      color: 'bg-cyan-500',
     },
   ];
 
@@ -127,7 +127,7 @@ const AdminDashboardPage = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-32 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                     <div
-                      className="bg-orange-500 h-2 rounded-full"
+                      className="bg-cyan-500 h-2 rounded-full"
                       style={{
                         width: `${(month.revenue / (stats.totalRevenue || 1)) * 100}%`,
                       }}
@@ -187,7 +187,7 @@ const AdminDashboardPage = () => {
             href="/admin/users"
             className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
-            <UsersIcon className="h-6 w-6 text-orange-500 mb-2" />
+            <UsersIcon className="h-6 w-6 text-cyan-500 mb-2" />
             <h3 className="font-medium text-gray-900 dark:text-white">Manage Users</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">View and manage all users</p>
           </a>
@@ -195,7 +195,7 @@ const AdminDashboardPage = () => {
             href="/admin/activity-logs"
             className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
-            <ChartBarIcon className="h-6 w-6 text-orange-500 mb-2" />
+            <ChartBarIcon className="h-6 w-6 text-cyan-500 mb-2" />
             <h3 className="font-medium text-gray-900 dark:text-white">Activity Logs</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">Monitor system activity</p>
           </a>
@@ -203,7 +203,7 @@ const AdminDashboardPage = () => {
             href="/events"
             className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
           >
-            <CalendarIcon className="h-6 w-6 text-orange-500 mb-2" />
+            <CalendarIcon className="h-6 w-6 text-cyan-500 mb-2" />
             <h3 className="font-medium text-gray-900 dark:text-white">View Events</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">Browse all events</p>
           </a>

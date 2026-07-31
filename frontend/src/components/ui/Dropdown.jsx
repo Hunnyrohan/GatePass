@@ -43,7 +43,7 @@ const Dropdown = ({
           bg-white text-gray-900 border-gray-300
           ${disabled 
             ? 'bg-gray-100 text-gray-400 cursor-not-allowed' 
-            : 'hover:border-orange-500 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20'
+            : 'hover:border-cyan-500 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20'
           }
           flex items-center justify-between
         `}
@@ -84,7 +84,7 @@ const Dropdown = ({
                     className={`
                       w-full px-4 py-3 text-left text-sm transition-colors
                       ${value === option.value
-                        ? 'bg-orange-50 text-orange-600 font-medium'
+                        ? 'bg-cyan-50 text-cyan-600 font-medium'
                         : 'text-gray-700 hover:bg-gray-50'
                       }
                     `}

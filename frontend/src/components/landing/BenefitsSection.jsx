@@ -27,7 +27,7 @@ const BenefitsSection = () => {
       title: 'Custom Branding',
       description: 'White-label your event pages with your own branding and colors.',
       icon: FiEdit,
-      color: 'bg-orange-500'
+      color: 'bg-cyan-500'
     },
     {
       title: 'Mobile App',
@@ -45,7 +45,7 @@ const BenefitsSection = () => {
       title: 'API Access',
       description: 'Integrate with your existing tools using our comprehensive REST API.',
       icon: FiCode,
-      color: 'bg-orange-500'
+      color: 'bg-cyan-500'
     },
   ];
 
@@ -59,7 +59,7 @@ const BenefitsSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Why Choose TicketGate?
+            Why Choose Gatepass?
           </h2>
           <p className="text-xl text-gray-600">
             Everything you need to succeed, all in one platform

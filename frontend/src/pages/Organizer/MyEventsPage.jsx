@@ -160,7 +160,7 @@ const MyEventsPage = () => {
           className="mb-8 flex items-center justify-between"
         >
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
               My Events
             </h1>
             <p className="text-gray-600 text-lg">Manage all your events</p>
@@ -190,14 +190,14 @@ const MyEventsPage = () => {
               placeholder="Search events..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
             />
           </div>
           <div className="w-48">
             <select
               value={filter}
               onChange={(e) => setFilter(e.target.value)}
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+              className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
             >
               {filterOptions.map(option => (
                 <option key={option.value} value={option.value}>

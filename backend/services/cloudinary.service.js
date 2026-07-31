@@ -13,7 +13,7 @@ cloudinary.config({
 /**
  * Upload image from buffer
  */
-const uploadImageFromBuffer = (buffer, folder = 'ticketgate', options = {}) => {
+const uploadImageFromBuffer = (buffer, folder = 'gatepass', options = {}) => {
   return new Promise((resolve, reject) => {
     const uploadStream = cloudinary.uploader.upload_stream(
       {
@@ -39,7 +39,7 @@ const uploadImageFromBuffer = (buffer, folder = 'ticketgate', options = {}) => {
 /**
  * Upload image from URL
  */
-const uploadImageFromUrl = async (url, folder = 'ticketgate', options = {}) => {
+const uploadImageFromUrl = async (url, folder = 'gatepass', options = {}) => {
   try {
     const result = await cloudinary.uploader.upload(url, {
       folder,
@@ -57,7 +57,7 @@ const uploadImageFromUrl = async (url, folder = 'ticketgate', options = {}) => {
 /**
  * Upload image from data URI (base64)
  */
-const uploadImageFromDataUri = async (dataUri, folder = 'ticketgate', options = {}) => {
+const uploadImageFromDataUri = async (dataUri, folder = 'gatepass', options = {}) => {
   try {
     const result = await cloudinary.uploader.upload(dataUri, {
       folder,
@@ -76,7 +76,7 @@ const uploadImageFromDataUri = async (dataUri, folder = 'ticketgate', options = 
  * Upload image from URL or data URI (auto-detect)
  * Handles: data URIs, HTTP/HTTPS URLs, and Cloudinary URLs
  */
-const uploadImage = async (imageUrl, folder = 'ticketgate/events', options = {}) => {
+const uploadImage = async (imageUrl, folder = 'gatepass/events', options = {}) => {
   if (!imageUrl) {
     return null;
   }

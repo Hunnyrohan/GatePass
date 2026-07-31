@@ -102,10 +102,10 @@ const FileUpload = ({
           className={`
             relative border-2 border-dashed rounded-lg p-8 text-center transition-colors
             ${dragActive 
-              ? 'border-orange-500 bg-orange-50' 
+              ? 'border-cyan-500 bg-cyan-50' 
               : error 
                 ? 'border-red-300 bg-red-50' 
-                : 'border-gray-300 bg-gray-50 hover:border-orange-400 hover:bg-orange-50'
+                : 'border-gray-300 bg-gray-50 hover:border-cyan-400 hover:bg-cyan-50'
             }
           `}
           whileHover={{ scale: 1.01 }}
@@ -125,7 +125,7 @@ const FileUpload = ({
               whileHover={{ scale: 1.05 }}
             >
               <div className="mb-4 p-4 bg-white rounded-full shadow-md">
-                <FiUpload className="w-8 h-8 text-orange-500" />
+                <FiUpload className="w-8 h-8 text-cyan-500" />
               </div>
               <p className="text-sm font-medium text-gray-700 mb-1">
                 Click to upload or drag and drop

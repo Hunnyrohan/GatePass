@@ -17,8 +17,8 @@ const AboutSection = () => {
   const highlights = [
     { icon: FiLayers, title: 'Enterprise Ready', color: 'bg-blue-500' },
     { icon: FiGlobe, title: 'Global Reach', color: 'bg-emerald-500' },
-    { icon: FiPhone, title: 'Mobile First', color: 'bg-orange-500' },
-    { icon: FiShield, title: 'Secure & Compliant', color: 'bg-orange-500' },
+    { icon: FiPhone, title: 'Mobile First', color: 'bg-cyan-500' },
+    { icon: FiShield, title: 'Secure & Compliant', color: 'bg-cyan-500' },
   ];
 
   const textVariants = {
@@ -54,7 +54,7 @@ const AboutSection = () => {
               viewport={{ once: true }}
               className="text-4xl font-bold text-gray-900 mb-6"
             >
-              About TicketGate
+              About Gatepass
             </motion.h2>
             <motion.div
               variants={{
@@ -73,7 +73,7 @@ const AboutSection = () => {
               className="space-y-4 text-gray-600 leading-relaxed"
             >
               <motion.p variants={textVariants}>
-                TicketGate is a modern event management and ticketing platform designed to simplify the entire event lifecycle. From creation to check-in, we provide everything you need to run successful events.
+                Gatepass is a modern event management and ticketing platform designed to simplify the entire event lifecycle. From creation to check-in, we provide everything you need to run successful events.
               </motion.p>
               <motion.p variants={textVariants}>
                 Founded in 2020, we've helped thousands of event organizers sell millions of tickets across various industries including music festivals, conferences, workshops, and corporate events.

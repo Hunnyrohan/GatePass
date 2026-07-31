@@ -154,7 +154,7 @@ const RefundManagementPage = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Card className="p-12 text-center">
             <p className="text-red-600 mb-4">Error loading refunds</p>
@@ -166,7 +166,7 @@ const RefundManagementPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -174,7 +174,7 @@ const RefundManagementPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
             Refund Management
           </h1>
           <p className="text-gray-600 text-lg">Review and manage refund requests for your events</p>
@@ -202,10 +202,10 @@ const RefundManagementPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Pending</p>
-                <p className="text-2xl font-bold text-orange-600">{stats.pending}</p>
+                <p className="text-2xl font-bold text-cyan-600">{stats.pending}</p>
               </div>
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                <FiClock className="w-6 h-6 text-orange-600" />
+              <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
+                <FiClock className="w-6 h-6 text-cyan-600" />
               </div>
             </div>
           </Card>
@@ -224,10 +224,10 @@ const RefundManagementPage = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-gray-600">Pending Amount</p>
-                <p className="text-2xl font-bold text-orange-600">{formatCurrency(stats.pendingAmount)}</p>
+                <p className="text-2xl font-bold text-cyan-600">{formatCurrency(stats.pendingAmount)}</p>
               </div>
-              <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                <FiCreditCard className="w-6 h-6 text-orange-600" />
+              <div className="w-12 h-12 bg-cyan-100 rounded-full flex items-center justify-center">
+                <FiCreditCard className="w-6 h-6 text-cyan-600" />
               </div>
             </div>
           </Card>
@@ -246,7 +246,7 @@ const RefundManagementPage = () => {
               <select
                 value={selectedEvent}
                 onChange={(e) => setSelectedEvent(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
                 <option value="all">All Events</option>
                 {events.map(event => (
@@ -260,7 +260,7 @@ const RefundManagementPage = () => {
               <select
                 value={filter}
                 onChange={(e) => setFilter(e.target.value)}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
                 {filterOptions.map(option => (
                   <option key={option.value} value={option.value}>

@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 const AnimatedText = ({ 
-  text = 'TicketGate', 
+  text = 'Gatepass', 
   className = '',
   delay = 0,
   speed = 0.1,

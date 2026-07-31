@@ -30,7 +30,7 @@ const RevenueChart = ({ data = [], className = '' }) => {
                   
                   {/* Bar */}
                   <div 
-                    className="w-full bg-gradient-to-t from-orange-600 via-orange-500 to-orange-400 rounded-t-xl transition-all duration-500 hover:from-orange-700 hover:via-orange-600 hover:to-orange-500 cursor-pointer shadow-lg hover:shadow-2xl relative overflow-hidden group/bar"
+                    className="w-full bg-gradient-to-t from-cyan-600 via-cyan-500 to-cyan-400 rounded-t-xl transition-all duration-500 hover:from-cyan-700 hover:via-cyan-600 hover:to-cyan-500 cursor-pointer shadow-lg hover:shadow-2xl relative overflow-hidden group/bar"
                     style={{ height: `${Math.max(percentage, 3)}%`, minHeight: percentage > 0 ? '20px' : '0px' }}
                     title={`${item.name}: NPR ${item.revenue.toLocaleString()}`}
                   >
@@ -59,7 +59,7 @@ const RevenueChart = ({ data = [], className = '' }) => {
       <div className="mt-6 pt-4 border-t-2 border-gray-200 dark:border-gray-700">
         <div className="flex items-center justify-between">
           <span className="text-gray-600 dark:text-gray-400 font-medium">Chart Total</span>
-          <span className="font-bold text-lg bg-gradient-to-r from-orange-600 to-orange-500 bg-clip-text text-transparent">
+          <span className="font-bold text-lg bg-gradient-to-r from-cyan-600 to-cyan-500 bg-clip-text text-transparent">
             NPR {data.reduce((sum, item) => sum + item.revenue, 0).toLocaleString()}
           </span>
         </div>

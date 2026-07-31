@@ -9,7 +9,7 @@ const PasswordStrengthMeter = ({ password }) => {
   const getColor = () => {
     if (score >= 80) return 'bg-green-500';
     if (score >= 60) return 'bg-yellow-500';
-    if (score >= 40) return 'bg-orange-500';
+    if (score >= 40) return 'bg-cyan-500';
     return 'bg-red-500';
   };
   
@@ -27,7 +27,7 @@ const PasswordStrengthMeter = ({ password }) => {
         <span className={`font-semibold ${
           score >= 80 ? 'text-green-600' :
           score >= 60 ? 'text-yellow-600' :
-          score >= 40 ? 'text-orange-600' :
+          score >= 40 ? 'text-cyan-600' :
           'text-red-600'
         }`}>
           {getStrengthText()} ({score})

@@ -12,7 +12,7 @@ const FAQSection = () => {
       answer: 'We support eSewa and other major payment gateways. All payments are processed securely through our encrypted payment system. You can also accept cash payments and mark them manually.',
     },
     {
-      question: 'How much does it cost to use TicketGate?',
+      question: 'How much does it cost to use Gatepass?',
       answer: 'Our Starter plan is completely free for events up to 100 tickets. For larger events, we charge a small percentage per ticket sold (2.5% for Professional plan). There are no monthly fees, setup fees, or hidden charges.',
     },
     {
@@ -50,7 +50,7 @@ const FAQSection = () => {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600">
-            Everything you need to know about TicketGate
+            Everything you need to know about Gatepass
           </p>
         </motion.div>
 

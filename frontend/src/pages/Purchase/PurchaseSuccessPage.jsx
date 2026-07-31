@@ -138,7 +138,7 @@ const PurchaseSuccessPage = () => {
 
   if (!transactionId) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 flex items-center justify-center">
         <Card className="p-12 text-center max-w-md">
           <p className="text-red-600 mb-4">Invalid transaction</p>
           <Button onClick={() => navigate('/events')}>Browse Events</Button>
@@ -149,7 +149,7 @@ const PurchaseSuccessPage = () => {
 
   if (error || !purchase) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50 flex items-center justify-center">
         <Card className="p-12 text-center max-w-md">
           <p className="text-red-600 mb-4">Failed to load purchase details</p>
           <Button onClick={() => navigate('/events')}>Browse Events</Button>
@@ -159,7 +159,7 @@ const PurchaseSuccessPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-orange-50/30">
+    <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-cyan-50/30">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
@@ -197,8 +197,8 @@ const PurchaseSuccessPage = () => {
                   <div className="space-y-3">
                     {purchase.event.startDate && (
                       <div className="flex items-start gap-3">
-                        <div className="p-2 bg-orange-100 rounded-lg mt-0.5">
-                          <FiCalendar className="w-5 h-5 text-orange-600" />
+                        <div className="p-2 bg-cyan-100 rounded-lg mt-0.5">
+                          <FiCalendar className="w-5 h-5 text-cyan-600" />
                         </div>
                         <div>
                           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Date & Time</p>
@@ -239,9 +239,9 @@ const PurchaseSuccessPage = () => {
                   <p className="font-bold text-gray-900 text-lg break-all">{transactionId}</p>
                 </div>
                 {purchase.totalAmount && (
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-orange-50 to-white border border-orange-200">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-cyan-50 to-white border border-cyan-200">
                     <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">Amount Paid</p>
-                    <p className="font-bold text-2xl bg-gradient-to-r from-orange-600 to-orange-700 bg-clip-text text-transparent">
+                    <p className="font-bold text-2xl bg-gradient-to-r from-cyan-600 to-cyan-700 bg-clip-text text-transparent">
                       {formatCurrency(purchase.totalAmount)}
                     </p>
                   </div>
@@ -267,7 +267,7 @@ const PurchaseSuccessPage = () => {
             {tickets.length > 0 && (
               <div className="pb-6 border-b-2 border-gray-200">
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-3">
-                  <div className="p-2 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg">
+                  <div className="p-2 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-lg">
                     <FiTag className="w-5 h-5 text-white" />
                   </div>
                   Your Tickets
@@ -279,13 +279,13 @@ const PurchaseSuccessPage = () => {
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: index * 0.1 }}
-                      className="flex flex-col p-6 rounded-2xl bg-white border-2 border-orange-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
+                      className="flex flex-col p-6 rounded-2xl bg-white border-2 border-cyan-100 shadow-sm hover:shadow-md transition-shadow relative overflow-hidden"
                     >
                       {/* Decorative elements */}
-                      <div className="absolute top-0 right-0 w-16 h-16 bg-orange-50 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
+                      <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-50 rounded-bl-full -mr-8 -mt-8 opacity-50"></div>
 
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl shadow-lg">
+                        <div className="p-3 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl shadow-lg">
                           <FiTag className="w-5 h-5 text-white" />
                         </div>
                         <div>
@@ -305,7 +305,7 @@ const PurchaseSuccessPage = () => {
                         </span>
                         <Link
                           to={`/dashboard/tickets/${ticket._id}`}
-                          className="text-orange-600 hover:text-orange-700 font-bold text-sm flex items-center gap-1"
+                          className="text-cyan-600 hover:text-cyan-700 font-bold text-sm flex items-center gap-1"
                         >
                           View QR Code →
                         </Link>
@@ -324,7 +324,7 @@ const PurchaseSuccessPage = () => {
                   <h3 className="font-bold text-gray-900 mb-2">What's Next?</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Your tickets have been sent to your email. You can also view them in your{' '}
-                    <Link to="/dashboard/tickets" className="text-orange-600 hover:text-orange-700 font-semibold underline">
+                    <Link to="/dashboard/tickets" className="text-cyan-600 hover:text-cyan-700 font-semibold underline">
                       Tickets
                     </Link>{' '}
                     section. Make sure to bring a valid ID to the event.
@@ -337,7 +337,7 @@ const PurchaseSuccessPage = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-6">
               <Button
                 variant="primary"
-                className="flex-1 py-4 text-lg font-bold bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 shadow-lg hover:shadow-xl"
+                className="flex-1 py-4 text-lg font-bold bg-gradient-to-r from-cyan-600 to-cyan-700 hover:from-cyan-700 hover:to-cyan-800 shadow-lg hover:shadow-xl"
                 onClick={() => navigate('/dashboard/tickets')}
               >
                 <span className="flex items-center justify-center gap-2">

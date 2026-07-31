@@ -99,7 +99,7 @@ const AnalyticsPage = () => {
       label: 'Tickets Sold',
       value: stats.totalTicketsSold?.toLocaleString() || '0',
       icon: FiTag,
-      color: 'bg-orange-500',
+      color: 'bg-cyan-500',
       change: '+0%',
     },
   ];
@@ -120,7 +120,7 @@ const AnalyticsPage = () => {
           <select
             value={dateRange}
             onChange={(e) => setDateRange(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:border-orange-500 dark:focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+            className="px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:border-cyan-500 dark:focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
           >
             <option value="1month">Last Month</option>
             <option value="3months">Last 3 Months</option>

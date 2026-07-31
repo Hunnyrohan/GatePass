@@ -1,6 +1,6 @@
 # Security Documentation
 
-This document provides comprehensive information about the security features and implementations in the TicketGate API backend.
+This document provides comprehensive information about the security features and implementations in the Gatepass API backend.
 
 ## Table of Contents
 

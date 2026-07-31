@@ -94,7 +94,7 @@ const ActivityLogsPage = () => {
                 setActivityTypeFilter(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             >
               <option value="">All Activity Types</option>
               {Object.values(ACTIVITY_TYPES).map((type) => (
@@ -116,7 +116,7 @@ const ActivityLogsPage = () => {
                 setUserIdFilter(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             />
           </div>
 
@@ -131,7 +131,7 @@ const ActivityLogsPage = () => {
                 setSearchTerm(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-orange-500 focus:border-transparent"
+              className="w-full pl-10 pr-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -220,7 +220,7 @@ const ActivityLogsPage = () => {
                       <div className="text-sm text-gray-900 dark:text-white">
                         {log.details || log.metadata ? (
                           <details className="cursor-pointer">
-                            <summary className="text-orange-600 dark:text-orange-400 hover:underline">
+                            <summary className="text-cyan-600 dark:text-cyan-400 hover:underline">
                               View Details
                             </summary>
                             <pre className="mt-2 p-2 bg-gray-50 dark:bg-gray-900 rounded text-xs overflow-auto">

@@ -350,7 +350,7 @@ exports.initiatePayPalPayment = async (req, res) => {
       purchaseId: purchaseId,
       returnUrl: returnUrl,
       cancelUrl: cancelUrl,
-      brandName: 'TicketGate',
+      brandName: 'Gatepass',
       requestId: `${purchaseId}-${Date.now()}`,
     };
 

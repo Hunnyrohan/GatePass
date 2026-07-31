@@ -33,8 +33,8 @@ const AdminLayout = () => {
         {/* Admin Header */}
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <div className="p-2 bg-orange-100 dark:bg-orange-900 rounded-lg">
-              <ShieldCheckIcon className="h-6 w-6 text-orange-600 dark:text-orange-400" />
+            <div className="p-2 bg-cyan-100 dark:bg-cyan-900 rounded-lg">
+              <ShieldCheckIcon className="h-6 w-6 text-cyan-600 dark:text-cyan-400" />
             </div>
             <div>
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Admin Portal</h2>
@@ -59,7 +59,7 @@ const AdminLayout = () => {
                     to={item.path}
                     className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition-all duration-200 ${
                       isActive
-                        ? 'bg-orange-600 text-white shadow-md'
+                        ? 'bg-cyan-600 text-white shadow-md'
                         : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                     }`}
                   >

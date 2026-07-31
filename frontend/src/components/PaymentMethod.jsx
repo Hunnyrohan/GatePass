@@ -43,7 +43,7 @@ const PaymentMethod = ({ selectedMethod, onSelect }) => {
             onClick={() => onSelect(method.id)}
             className={`
               w-full p-4 rounded-xl border-2 transition-all duration-300 cursor-pointer flex items-center gap-4
-              ${isSelected ? "border-orange-500 bg-orange-50/50 shadow-md" : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"}
+              ${isSelected ? "border-cyan-500 bg-cyan-50/50 shadow-md" : "border-gray-200 bg-white hover:border-gray-300 hover:shadow-sm"}
             `}
           >
             {/* Icon/Logo */}
@@ -68,7 +68,7 @@ const PaymentMethod = ({ selectedMethod, onSelect }) => {
                 <h4 className="font-bold text-gray-900">{method.name}</h4>
                 <div className={`
                   w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all
-                  ${isSelected ? "border-orange-500 bg-orange-500" : "border-gray-300"}
+                  ${isSelected ? "border-cyan-500 bg-cyan-500" : "border-gray-300"}
                 `}>
                   {isSelected && <FiCheck className="w-4 h-4 text-white" />}
                 </div>

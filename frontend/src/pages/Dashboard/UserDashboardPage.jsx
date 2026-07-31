@@ -117,7 +117,7 @@ const UserDashboardPage = () => {
       label: 'Total Tickets',
       value: totalTickets,
       icon: FiTag,
-      color: 'bg-orange-500',
+      color: 'bg-cyan-500',
     },
     {
       label: 'Upcoming Events',
@@ -217,7 +217,7 @@ const UserDashboardPage = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.5 + index * 0.1 }}
-                      className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:border-orange-500 hover:shadow-md transition-all"
+                      className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200 hover:border-cyan-500 hover:shadow-md transition-all"
                     >
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">

@@ -71,13 +71,13 @@ const SalesReportsPage = () => {
       label: 'Average Revenue per Event',
       value: formatCurrency(stats.averageRevenuePerEvent || 0),
       icon: FiTrendingUp,
-      color: 'from-orange-500 to-orange-600',
+      color: 'from-cyan-500 to-cyan-600',
       change: '+15%',
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -86,7 +86,7 @@ const SalesReportsPage = () => {
           className="mb-8 flex items-center justify-between"
         >
           <div>
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
               Sales Reports
             </h1>
             <p className="text-gray-600 text-lg">Track your sales performance and revenue</p>
@@ -95,7 +95,7 @@ const SalesReportsPage = () => {
             <select
               value={dateRange}
               onChange={(e) => setDateRange(e.target.value)}
-              className="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+              className="px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
             >
               <option value="1month">Last Month</option>
               <option value="3months">Last 3 Months</option>

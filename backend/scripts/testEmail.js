@@ -7,7 +7,7 @@ const config = {
   EMAIL_PORT: parseInt(process.env.EMAIL_PORT) || 587,
   EMAIL_USER: process.env.EMAIL_USER || process.env.EMAIL_FROM,
   EMAIL_PASS: process.env.EMAIL_PASS,
-  EMAIL_FROM: process.env.EMAIL_FROM || 'noreply@ticketgate.com'
+  EMAIL_FROM: process.env.EMAIL_FROM || 'noreply@gatepass.com'
 };
 
 async function testEmail() {
@@ -43,11 +43,11 @@ async function testEmail() {
     console.log('✅ SMTP Connection successful!');
 
     const mailOptions = {
-      from: `"TicketGate Test" <${config.EMAIL_FROM}>`,
+      from: `"Gatepass Test" <${config.EMAIL_FROM}>`,
       to: "susantmahat2@gmail.com", // Send to self
-      subject: 'TicketGate Nodemailer Test',
-      text: 'If you are reading this, your Nodemailer configuration for TicketGate is working correctly!',
-      html: '<h1>Success!</h1><p>Your Nodemailer configuration for <b>TicketGate</b> is working correctly!</p>'
+      subject: 'Gatepass Nodemailer Test',
+      text: 'If you are reading this, your Nodemailer configuration for Gatepass is working correctly!',
+      html: '<h1>Success!</h1><p>Your Nodemailer configuration for <b>Gatepass</b> is working correctly!</p>'
     };
 
     console.log(`Sending test email to ${config.EMAIL_USER}...`);

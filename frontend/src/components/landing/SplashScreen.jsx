@@ -10,7 +10,7 @@ const SplashScreen = ({ onComplete }) => {
 
   useEffect(() => {
     // Animate text letter by letter
-    const text = 'TicketGate';
+    const text = 'Gatepass';
     let currentIndex = 0;
 
     const textTimer = setTimeout(() => {
@@ -54,7 +54,7 @@ const SplashScreen = ({ onComplete }) => {
           transition={{ duration: 0.8, ease: 'easeInOut' }}
           className="fixed inset-0 z-50 flex flex-col items-center justify-center overflow-hidden"
           style={{
-            backgroundImage: 'url(/assets/images/night-outdoor-music-festival-concert-600nw-2318139457.webp)',
+            backgroundImage: 'url(/assets/images/hero-bg.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat'
@@ -82,7 +82,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute top-16 left-8"
             >
-              <FiMic className="w-20 h-20 text-orange-500" />
+              <FiMic className="w-20 h-20 text-cyan-500" />
             </motion.div>
 
             <motion.div
@@ -102,7 +102,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute top-24 right-12"
             >
-              <FiMic className="w-24 h-24 text-orange-500" />
+              <FiMic className="w-24 h-24 text-cyan-500" />
             </motion.div>
 
             <motion.div
@@ -120,7 +120,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute bottom-40 left-16"
             >
-              <FiMic className="w-18 h-18 text-orange-500" />
+              <FiMic className="w-18 h-18 text-cyan-500" />
             </motion.div>
 
             {/* DJ Equipment - Headphones */}
@@ -140,7 +140,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute top-1/3 left-12"
             >
-              <FiHeadphones className="w-22 h-22 text-orange-500" />
+              <FiHeadphones className="w-22 h-22 text-cyan-500" />
             </motion.div>
 
             <motion.div
@@ -159,7 +159,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute bottom-1/3 right-14"
             >
-              <FiHeadphones className="w-20 h-20 text-orange-500" />
+              <FiHeadphones className="w-20 h-20 text-cyan-500" />
             </motion.div>
 
             {/* Music Notes / Radio */}
@@ -217,7 +217,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute bottom-24 right-20"
             >
-              <FiMic className="w-16 h-16 text-orange-500" />
+              <FiMic className="w-16 h-16 text-cyan-500" />
             </motion.div>
 
             {/* Floating Tickets */}
@@ -237,7 +237,7 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute top-20 left-10"
             >
-              <FiTag className="w-16 h-16 text-orange-500" />
+              <FiTag className="w-16 h-16 text-cyan-500" />
             </motion.div>
 
             {/* Calendar Icons */}
@@ -256,13 +256,13 @@ const SplashScreen = ({ onComplete }) => {
               }}
               className="absolute bottom-32 left-20"
             >
-              <FiCalendar className="w-24 h-24 text-orange-500" />
+              <FiCalendar className="w-24 h-24 text-cyan-500" />
             </motion.div>
           </div>
 
           {/* Main Content - Centered Animated Text */}
           <div className="flex-1 flex flex-col items-center justify-center relative z-10">
-            {/* Animated "TicketGate" Text */}
+            {/* Animated "Gatepass" Text */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: textVisible ? 1 : 0, scale: textVisible ? 1 : 0.9 }}
@@ -298,7 +298,7 @@ const SplashScreen = ({ onComplete }) => {
                     {letter === ' ' ? '\u00A0' : letter}
                   </motion.span>
                 ))}
-                {displayedText.length < 'TicketGate'.length && (
+                {displayedText.length < 'Gatepass'.length && (
                   <motion.span
                     animate={{ opacity: [1, 0, 1] }}
                     transition={{
@@ -306,7 +306,7 @@ const SplashScreen = ({ onComplete }) => {
                       repeat: Infinity,
                       ease: 'easeInOut',
                     }}
-                    className="inline-block w-1 h-[0.9em] bg-orange-500 ml-1 align-middle"
+                    className="inline-block w-1 h-[0.9em] bg-cyan-500 ml-1 align-middle"
                   />
                 )}
               </h1>
@@ -314,26 +314,26 @@ const SplashScreen = ({ onComplete }) => {
               {/* Subtitle */}
               <motion.p
                 initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: displayedText.length === 'TicketGate'.length ? 1 : 0, y: displayedText.length === 'TicketGate'.length ? 0 : 10 }}
+                animate={{ opacity: displayedText.length === 'Gatepass'.length ? 1 : 0, y: displayedText.length === 'Gatepass'.length ? 0 : 10 }}
                 transition={{ 
                   duration: 0.6, 
                   delay: 0.3,
                   ease: [0.16, 1, 0.3, 1]
                 }}
-                className="text-orange-500 text-xl sm:text-2xl md:text-3xl font-semibold tracking-wider flex items-center justify-center gap-3"
+                className="text-cyan-500 text-xl sm:text-2xl md:text-3xl font-semibold tracking-wider flex items-center justify-center gap-3"
               >
                 <motion.span
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                 >
-                  <FiStar className="w-6 h-6 text-orange-500" />
+                  <FiStar className="w-6 h-6 text-cyan-500" />
                 </motion.span>
                 Event Management Platform
                 <motion.span
                   animate={{ rotate: [0, -360] }}
                   transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
                 >
-                  <FiStar className="w-6 h-6 text-orange-500" />
+                  <FiStar className="w-6 h-6 text-cyan-500" />
                 </motion.span>
               </motion.p>
             </motion.div>
@@ -351,8 +351,8 @@ const SplashScreen = ({ onComplete }) => {
             >
               {[
                 { icon: FiCalendar, label: 'Events', color: 'from-blue-500 to-blue-600' },
-                { icon: FiTag, label: 'Tickets', color: 'from-orange-500 to-orange-600' },
-                { icon: FiUsers, label: 'Community', color: 'from-orange-500 to-orange-600' },
+                { icon: FiTag, label: 'Tickets', color: 'from-cyan-500 to-cyan-600' },
+                { icon: FiUsers, label: 'Community', color: 'from-cyan-500 to-cyan-600' },
                 { icon: FiMapPin, label: 'Venues', color: 'from-emerald-500 to-emerald-600' },
               ].map((item, index) => {
                 const Icon = item.icon;
@@ -375,7 +375,7 @@ const SplashScreen = ({ onComplete }) => {
                     className="flex flex-col items-center gap-3 group cursor-pointer"
                   >
                     <motion.div 
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg shadow-orange-500/30 group-hover:shadow-xl group-hover:shadow-orange-500/50 transition-all duration-300`}
+                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.color} flex items-center justify-center shadow-lg shadow-cyan-500/30 group-hover:shadow-xl group-hover:shadow-cyan-500/50 transition-all duration-300`}
                       whileHover={{ rotate: 5 }}
                     >
                       <Icon className="w-8 h-8 text-white" />

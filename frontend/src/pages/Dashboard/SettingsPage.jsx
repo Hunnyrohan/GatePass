@@ -141,7 +141,7 @@ const SettingsPage = () => {
             onClick={() => setActiveTab('profile')}
             className={`flex-1 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
               activeTab === 'profile'
-                ? 'bg-orange-600 text-white shadow-md'
+                ? 'bg-cyan-600 text-white shadow-md'
                 : 'text-gray-700 hover:bg-gray-50'
             }`}
           >
@@ -154,7 +154,7 @@ const SettingsPage = () => {
             onClick={() => setActiveTab('password')}
             className={`flex-1 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
               activeTab === 'password'
-                ? 'bg-orange-600 text-white shadow-md'
+                ? 'bg-cyan-600 text-white shadow-md'
                 : 'text-gray-700 hover:bg-gray-50'
             }`}
           >
@@ -167,7 +167,7 @@ const SettingsPage = () => {
             onClick={() => setActiveTab('security')}
             className={`flex-1 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 ${
               activeTab === 'security'
-                ? 'bg-orange-600 text-white shadow-md'
+                ? 'bg-cyan-600 text-white shadow-md'
                 : 'text-gray-700 hover:bg-gray-50'
             }`}
           >
@@ -189,8 +189,8 @@ const SettingsPage = () => {
           <Card className="p-6 lg:p-8">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-3">
-                <div className="p-2 bg-orange-100 rounded-lg">
-                  <FiUser className="w-5 h-5 text-orange-600" />
+                <div className="p-2 bg-cyan-100 rounded-lg">
+                  <FiUser className="w-5 h-5 text-cyan-600" />
                 </div>
                 Profile Information
               </h2>
@@ -299,8 +299,8 @@ const SettingsPage = () => {
           <Card className="p-6 lg:p-8">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-3">
-                <div className="p-2 bg-orange-100 rounded-lg">
-                  <FiKey className="w-5 h-5 text-orange-600" />
+                <div className="p-2 bg-cyan-100 rounded-lg">
+                  <FiKey className="w-5 h-5 text-cyan-600" />
                 </div>
                 Change Password
               </h2>
@@ -411,8 +411,8 @@ const SettingsPage = () => {
           <Card className="p-6 lg:p-8">
             <div className="mb-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-2 flex items-center gap-3">
-                <div className="p-2 bg-orange-100 rounded-lg">
-                  <FiShield className="w-5 h-5 text-orange-600" />
+                <div className="p-2 bg-cyan-100 rounded-lg">
+                  <FiShield className="w-5 h-5 text-cyan-600" />
                 </div>
                 Security Settings
               </h2>
@@ -421,7 +421,7 @@ const SettingsPage = () => {
 
             <div className="space-y-4">
               {/* Email 2FA */}
-              <Card className="p-5 border-2 border-gray-100 hover:border-orange-200 transition-colors">
+              <Card className="p-5 border-2 border-gray-100 hover:border-cyan-200 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -460,12 +460,12 @@ const SettingsPage = () => {
               </Card>
 
               {/* Two-Factor Authentication (TOTP) */}
-              <Card className="p-5 border-2 border-gray-100 hover:border-orange-200 transition-colors">
+              <Card className="p-5 border-2 border-gray-100 hover:border-cyan-200 transition-colors">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 bg-orange-50 rounded-lg">
-                        <FiShield className="w-5 h-5 text-orange-600" />
+                      <div className="p-2 bg-cyan-50 rounded-lg">
+                        <FiShield className="w-5 h-5 text-cyan-600" />
                       </div>
                       <h3 className="font-semibold text-gray-900">Authenticator App (TOTP)</h3>
                       {user.mfaEnabled && (

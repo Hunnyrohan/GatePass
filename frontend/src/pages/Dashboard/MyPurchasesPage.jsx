@@ -68,7 +68,7 @@ const MyPurchasesPage = () => {
 
   if (error) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <Card className="p-12 text-center">
             <p className="text-red-600 mb-4">Error loading purchases</p>
@@ -80,7 +80,7 @@ const MyPurchasesPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-orange-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-cyan-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header */}
         <motion.div
@@ -88,7 +88,7 @@ const MyPurchasesPage = () => {
           animate={{ opacity: 1, y: 0 }}
           className="mb-8"
         >
-          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent mb-2">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-600 to-cyan-800 bg-clip-text text-transparent mb-2">
             My Purchases
           </h1>
           <p className="text-gray-600 text-lg">View all your ticket purchases</p>
@@ -110,7 +110,7 @@ const MyPurchasesPage = () => {
                   setFilter(e.target.value);
                   setCurrentPage(1);
                 }}
-                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
+                className="w-full px-4 py-2 rounded-lg border border-gray-300 bg-white text-gray-900 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/20"
               >
                 {filterOptions.map(option => (
                   <option key={option.value} value={option.value}>
